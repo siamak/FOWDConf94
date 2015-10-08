@@ -1,0 +1,80 @@
+//
+//
+// *** Variables ***
+// =================
+//
+// Everything need to know CSS
+// Global variables of all kinds
+//
+$version                : '1.0.3';
+
+
+
+// Road: Grid system
+$width-wrapper		    : 90rem;
+$width-container		: 60rem;
+$columns        	    : 12;
+$gutter-width           : 1rem;
+$breakpoints            : ((xsmall, 20rem), (small, 48rem), (medium, 62rem)) !default;
+$tablet					: nth(nth($breakpoints, 2), 2) - 1rem;
+
+
+
+// Road: Base
+$base-radius            : 3px;
+$base-radius-large      : 30px;
+$base-min-space         : 1rem;
+$base-max-space         : 3rem;
+
+
+// Road: Typography
+$font-IranSans          : "iransans";
+$font-latin             : "Open Sans";
+$font-light             : $font-latin, $font-IranSans, Helvetica, Geneva, Verdana, sans-serif;
+
+$typo-font-weight       : normal;
+$typo-line-height       : 2;
+$typo-font-base         : 16;
+$typo-font-size			: $typo-font-base/ ($typo-font-base * 1.2) + rem;
+$typo-measure           : $typo-font-base * $typo-line-height;
+$typo-typescale-unit    : rem;
+
+$typo-scale             : (
+	typo-tera           : 117,
+	typo-giga           : 90,
+	typo-mega           : 72,
+	typo-alpha          : 60,
+	typo-beta           : 48,
+	typo-gamma          : 36,
+	typo-delta          : 24,
+	typo-epsilon        : 21,
+	typo-zeta           : 18,
+) !default;
+
+$typo-headings          : (
+	h1                  : typo-mega,
+	h2                  : typo-alpha,
+	h3                  : typo-beta,
+	h4                  : typo-gamma,
+	h5                  : typo-delta,
+	h6                  : typo-zeta
+) !default;
+
+
+
+// Road: Base Colors
+$background             : #fefefe;
+
+$blue-light				: #42A5F5;
+$blue-accent 			: #006DCC;
+$blue					: #1976D2;
+$blue-dark				: #26567F;
+
+$white-dark				: #F5F5F5;
+$gray-light				: lighten(#E0E0E0, 2.5);
+$gray					: #BDBDBD;
+$black		      		: #272B2E;
+$black-light			: mix($gray, $black, 25deg);
+$black-opacify			: rgba(black, .1);
+
+$colors		   			: ( blue-light: $blue-light, blue-accent: $blue-accent, blue: $blue, blue-dark: $blue-dark);

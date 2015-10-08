@@ -1,0 +1,193 @@
+	"people": [{
+		"slug": "manighasemi",
+		"name": "مانی قاسمی",
+		"is_speaker": true,
+		"is_skype": false,
+		"just_panel": true,
+		"panel": 1,
+		"position": "موسس و سردبیر دیجیاتو"
+	},
+	{
+		"slug": "drfarahani",
+		"name": "دکتر فراهانی",
+		"is_speaker": true,
+		"is_skype": false,
+		"just_panel": true,
+		"panel": 1,
+		"position": ""
+	},
+	{
+		"slug": "sbehjati",
+		"name": "سجاد بهجتی",
+		"is_speaker": true,
+		"is_skype": false,
+		"just_panel": true,
+		"panel": 1,
+		"position": ""
+	},
+	
+	{
+		"slug": "pouyamahmoodian",
+		"name": "پویا محمودیان",
+		"is_speaker": false,
+		"is_skype": false,
+		"just_panel": true,
+		"panel": 2,
+		"position": "مدیرعامل عکس‌پرینت"
+	},
+	{
+		"slug": "mjshakouri",
+		"name": "محمدجواد شکوری",
+		"is_speaker": false,
+		"is_skype": false,
+		"just_panel": true,
+		"panel": 2,
+		"position": "مدیرعامل کلوب"
+	},
+	{
+		"slug": "nimanourmohammadi",
+		"name": "نیما نور محمدی",
+		"is_speaker": false,
+		"is_skype": false,
+		"just_panel": true,
+		"panel": 2,
+		"position": ""
+	},
+	{
+		"slug": "amirabbasabdolali",
+		"name": "امیرعباس عبدالعلی",
+		"is_speaker": false,
+		"is_skype": false,
+		"position": "طراح و توسعه دهنده وب"
+	},
+	{
+		"slug": "arashmilani",
+		"name": "آرش میلانی",
+		"is_speaker": false,
+		"is_skype": false,
+		"position": "طراح و توسعه دهنده وب"
+	},
+	{
+		"slug": "parhambaghestani",
+		"name": "پرهام باغستانی",
+		"is_speaker": false,
+		"is_skype": false,
+		"position": "طراح تجربه ‌کاربری و رابط‌کاربری"
+	},
+	{
+		"slug": "shahotofani",
+		"name": "شاهو طوفانی",
+		"is_speaker": false,
+		"is_skype": false,
+		"position": "طراح و توسعه‌دهنده وب"
+	},
+	{
+		"slug": "jadi",
+		"name": "جادی میرمیرانی",
+		"is_speaker": false,
+		"is_skype": false,
+		"panel": 1,
+		"position": "گیک و طرفدار متن‌باز"
+	},
+	{
+		"slug": "alinematishahab",
+		"name": "علی نعمتی‌شهاب",
+		"is_speaker": false,
+		"is_skype": false,
+		"position": "تحلیل‌گر سیستم و کسب‌وکار"
+	},
+	{
+		"slug": "salehsozanchi",
+		"name": "صالح سوزنچی",
+		"is_speaker": false,
+		"is_skype": false,
+		"position": "توسعه دهنده نرم‌افزار"
+	},
+	{
+		"slug": "sallarkaboli",
+		"name": "سالار کابلی",
+		"is_speaker": false,
+		"is_skype": true,
+		"position": "توسعه‌دهنده نرم‌افزار کیاسکد"
+	},
+	{
+		"slug": "perrymitchell",
+		"name": "پری میچل",
+		"is_speaker": false,
+		"is_skype": true,
+		"position": "توسعه‌دهنده ارشد نرم‌افزار کیاسکد"
+	},
+	{
+		"slug": "mohsentaleb",
+		"name": "محسن طالب",
+		"is_speaker": false,
+		"is_skype": false,
+		"position": "طراح رابط کاربری"
+	},
+	{
+		"slug": "miladislamizad",
+		"name": "میلاد اسلامی‌زاد",
+		"is_speaker": false,
+		"is_skype": false,
+		"position": "توسعه‌دهنده کسب و کار"
+	},
+	{
+		"slug": "davoodtorabzadeh",
+		"name": "داوود تراب‌زاده",
+		"is_speaker": false,
+		"is_skype": false,
+		"position": "طراح تجربه ‌کاربری"
+	},
+	{
+		"slug": "asalrad",
+		"name": "عسل راد",
+		"is_speaker": false,
+		"is_skype": false,
+		"position": "توسعه‌دهنده کسب و کار"
+	},
+
+	{
+		"slug": "shahintabary",
+		"name": "شاهین طبری",
+		"is_speaker": true,
+		"is_skype": false,
+		"panel": 2,
+		"position": "موسس و رییس هیئت مدیره چارگون"
+	},
+	{
+		"slug": "bahramsadeghi",
+		"name": "دکتر بهرام صادقی",
+		"is_speaker": true,
+		"is_skype": false,
+		"position": "استاد دانشگاه"
+	},
+	{
+		"slug": "shahabjavanmardi",
+		"name": "شهاب جوانمردی",
+		"is_speaker": true,
+		"is_skype": false,
+		"position": "مدیرعامل فناپ"
+	},
+	{
+		"slug": "majidalavizadeh",
+		"name": "مجید علوی‌زاده",
+		"is_speaker": true,
+		"is_skype": false,
+		"panel": 2,
+		"position": "موسس مجیدآنلاین و توسعه‌دهنده"
+	},
+	{
+		"slug": "atakhalighi",
+		"name": "عطا خلیقی",
+		"is_speaker": true,
+		"is_skype": false,
+		"panel": 1,
+		"position": "موسس پرشین‌بلاگ و ارانیکو"
+	},
+	{
+		"slug": "arashbarahmand",
+		"name": "آرش برهمند",
+		"is_speaker": true,
+		"is_skype": false,
+		"position": "سردبیر ماهنامه پیوست"
+	}]

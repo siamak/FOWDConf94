@@ -1,0 +1,170 @@
+	"sponsors":[{
+		"slug": "majidonline",
+		"name": "مجید آنلاین",
+		"url": "http://majidonline.com/",
+		"cat": 1,
+		"is_pioneer": false
+	},
+	{
+		"slug": "ict",
+		"name": "سازمان فناوری اطلاعات ایران",
+		"url": "http://itc.ir/",
+		"cat": 1,
+		"is_pioneer": false
+	},
+	{
+		"slug": "saramad",
+		"name": "مرکز رسانه های دیجیتال",
+		"url": "http://saramad.ir/",
+		"cat": 1,
+		"is_pioneer": false
+	},
+	{
+		"slug": "aparat",
+		"name": "آپارات",
+		"url": "http://aparat.com/",
+		"cat": 1,
+		"is_pioneer": false
+	},
+	{
+		"slug": "bayan",
+		"name": "شرکت بیان",
+		"url": "http://bayan.ir/",
+		"cat": 1,
+		"is_pioneer": false
+	},
+	{
+		"slug": "irannsr",
+		"name": "سازمان نظام صنفی رایانه‌ای استان تهران",
+		"url": "http://tehran.irannsr.org/",
+		"cat": 1
+	},
+	{
+		"slug": "iranea",
+		"name": "کانون کارآفرینی ایران",
+		"url": "http://iranea.com/",
+		"cat": 1
+	},
+	{
+		"slug": "ikiu",
+		"name": "دانشگاه بین المللی امام خمینی",
+		"url": "http://ikiu.ac.ir/fa/",
+		"cat": 1
+	},
+	{
+		"slug": "peivast",
+		"name": "ماهنامه پیوست",
+		"url": "http://peivast.com/",
+		"cat": 1
+	},
+	{
+		"slug": "kalleh",
+		"name": "شرکت فرآورده های لبنی کاله",
+		"url": "http://kalleh.com/",
+		"cat": 2
+	},
+	{
+		"slug": "clickyab",
+		"name": "کلیک‌یاب",
+		"url": "http://clickyab.com/",
+		"cat": 2
+	},
+	{
+		"slug": "fastdic",
+		"name": "فست‌دیکشنری",
+		"url": "http://fastdic.com/",
+		"cat": 2
+	},
+	{
+		"slug": "atitel",
+		"name": "آتی‌تل",
+		"url": "http://atitel.com",
+		"cat": 2
+	},
+	{
+		"slug": "taskulu",
+		"name": "تسکولو",
+		"url": "http://taskulu.com/",
+		"cat": 2
+	},
+	{
+		"slug": "digiato",
+		"name": "دیجیاتو",
+		"url": "http://digiato.com/",
+		"cat": 3,
+		"is_featured": false
+	},
+	{
+		"slug": "eranico",
+		"name": "ارانیکو",
+		"url": "http://eranico.com/",
+		"cat": 3,
+		"is_featured": false
+	},
+	{
+		"slug": "ponisha",
+		"name": "پونیشا",
+		"url": "http://ponisha.ir/",
+		"cat": 3
+	},
+	{
+		"slug": "techcafe",
+		"name": "کافه فناوری",
+		"url": "http://techcafe.tv/",
+		"cat": 3
+	},
+	{
+		"slug": "vajehyab",
+		"name": "واژه یاب",
+		"url": "http://vajehyab.com/",
+		"cat": 3
+	},
+	{
+		"slug": "barsam",
+		"name": "برسام",
+		"url": "http://barsam.ir/",
+		"cat": 3,
+		"is_featured": false
+	},
+	{
+		"slug": "fontiran",
+		"name": "فونت ایران",
+		"url": "http://fontiran.com/",
+		"cat": 3,
+		"is_featured": false
+	},
+	{
+		"slug": "parscoders",
+		"name": "پارس کدرز",
+		"url": "http://parscoders.com/",
+		"cat": 3,
+		"is_featured": false
+	},
+	{
+		"slug": "wp-parsi",
+		"name": "وردپرس‌پارسی‎",
+		"url": "http://wp-parsi.com/",
+		"cat": 3,
+		"is_featured": false
+	},
+	{
+		"slug": "techera",
+		"name": "عصر تکنولوژی",
+		"url": "http://techera.ir/",
+		"cat": 3,
+		"is_featured": false
+	},
+	{
+		"slug": "mantaraham",
+		"name": "کمپین من طراحم",
+		"url": "http://mantaraham.ir/",
+		"cat": 3,
+		"is_featured": false
+	},
+	{
+		"slug": "zamana",
+		"name": "زمانا",
+		"url": "http://zamana.blog.ir/",
+		"cat": 3,
+		"is_featured": false
+	}]

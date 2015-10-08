@@ -1,0 +1,1734 @@
+<!--
+	                       _                 _
+	__      _____ ___  ___| |__   ___   ___ | |  ___  _ __ __ _
+	\ \ /\ / / __/ __|/ __| '_ \ / _ \ / _ \| | / _ \| '__/ _` |
+	 \ V  V /\__ \__ \ (__| | | | (_) | (_) | || (_) | | | (_| |
+	  \_/\_/ |___/___/\___|_| |_|\___/ \___/|_(_)___/|_|  \__ |
+	                                                      |___/
+	Siamak Mokhtari <www.siamak.us> at Web Standards School <www.wsschool.org>.
+	Copyright (C) 2015 Siamak Mokhtari <hi@siamak.work>.
+	Under Licensed MIT <siamak.mit-license.org>.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>اولین همایش آینده طراحی وب</title>
+        <meta name="author" content="WSSCHOOL.ORG">
+        <meta name="keywords" content="طراحی وب,آینده طراحی وب,مدرسه استاندارد های وب,همایش,Front-end">
+        <meta name="description" content="​اولین همایش آینده طراحی وب، کاری از مدرسه استانداردهای وب">
+        <meta name="robots" content="index follow">
+        <meta name="copyright" content="2015-2016">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0 user-scalable=no width=device-width">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="مدرسه استانداردهای وب">
+        <meta property="og:url" content="http://conf.wsschool.org/fowd/">
+        <meta property="og:title" content="اولین همایش آینده طراحی وب">
+        <meta property="og:description" content="​اولین همایش آینده طراحی وب با هدف معرفی تکنولوژی ها و متدهای جدید در طراحی وب و ارتقا طراحی وب امسال، در ایران برگزار می‌شود.">
+        <meta property="og:image" content="http://conf.wsschool.org/fowd/dist/img/fowd.jpg">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="http://conf.wsschool.org/fowd/">
+        <meta name="twitter:domain" content="http://conf.wsschool.org/fowd/">
+        <meta name="twitter:title" content="اولین همایش آینده طراحی وب">
+        <meta name="twitter:description" content="​اولین همایش آینده طراحی وب با هدف معرفی تکنولوژی ها و متدهای جدید در طراحی وب و ارتقا طراحی وب امسال، در ایران برگزار می‌شود.">
+        <meta name="twitter:image" content="http://conf.wsschool.org/fowd/dist/img/fowd.jpg">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="icon" type="image/png" href="dist/img/favicon.png">
+        <link href="dist/css/styles.css?1444325754093" rel="stylesheet" media="all">
+        <!-- 
+	 ___  ___ __  __  ___    ___ ___  _  _ _____ 
+	|   \| __|  \/  |/ _ \  | __/ _ \| \| |_   _|
+	| |) | _|| |\/| | (_) | | _| (_) | .` | | |  
+	|___/|___|_|  |_|\___/  |_| \___/|_|\_| |_|  
+	
+	This version has Iransans Demo if you need Full pack IranSans Font. READ FULL_VERSION.txt located at "dist/fonts/iransans-demo/" -->
+        <link href="dist/fonts/iransans-demo/iransans-demo.css?1444325754093" rel="stylesheet">
+    </head>
+    <body>
+        <!-- -- Hello FOWD -- -->
+        <header class="hero--header on-navigation">
+            <section class="wrap hero--header-wrap">
+                <section class="hero--header-container">
+                    <div class="wrap-row bottom wrap-static">
+                        <section class="column--xsmall-12 column--small-6 column--medium-6">
+                            <div class="column--inner">
+                                <h1>
+                                    <img src="dist/img/svgs/TheFutureOfWebDesign-logo.svg" alt="اولین همایش آینده طراحی وب" class="primary--logo">
+                                </h1>
+                                <div class="hero--header-mast">
+                                    <p>همایش آینده طراحی وب یک رویداد دو روزه است برای طراحان و توسعه دهندگان Front–End و تمام کسانی که
+                                        میخواهد وب فارسی را دگرگون و جذاب‌تر نمایند. در این رویداد ارائه دهندگان و سخنران‌ها تجربیات
+                                        و تخصص خود را با علاقمندان به اشتراک می‌گذارند.</p>
+                                    <div class="date-show">
+                                        <time class="inline">
+                                            <span class="days">&infin;</span>
+                                            <span>روز</span>
+                                        </time>
+                                        <time class="inline">
+                                            <span class="hours">&infin;</span>
+                                            <span>ساعت</span>
+                                        </time>
+                                        <time class="inline">
+                                            <span class="minutes">&infin;</span>
+                                            <span>دقیقه</span>
+                                        </time>
+                                        <time class="inline">
+                                            <span class="seconds">&infin;</span>
+                                            <span>ثانیه</span>
+                                        </time>
+                                        <div class="inline">تا شروع زمان باقی مانده است.</div>
+                                    </div>
+                                </div>
+                                <div class="hero--header-mast"><a href="#introduction" class="button radius button-blue-light">معرفی رویداد</a><a href="#speakers"
+                                    class="button radius button-blue-accent">سخنران‌ها</a><a href="#ticket" class="button radius button-blue">ثبت نام در همایش</a></div>
+                            </div>
+                        </section>
+                        <section class="column--small-6 column--xsmall-12">
+                            <div class="column--inner">
+                                <div class="hero--header-mast">
+                                    <div class="social"><a href="mailto:contact@wsschool.org" target="_self" class="social-link"><i class="fa fa-2x fa-envelope"></i></a>
+                                        <a
+                                        href="http://instagram.com/wsschool_org" target="_blank" class="social-link"><i class="fa fa-2x fa-instagram"></i></a><a href="http://facebook.com/wsschool" target="_blank"
+                                            class="social-link"><i class="fa fa-2x fa-facebook"></i></a><a href="http://twitter.com/wsschool_org"
+                                            target="_blank" class="social-link"><i class="fa fa-2x fa-twitter"></i></a></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </section>
+        </header>
+        <!-- -- Main -- -->
+        <main class="hero--main">
+            <!-- -- Introduction -- -->
+            <section id="introduction" class="section wrap">
+                <section class="wrap-row wrap-is-border">
+                    <aside class="column--xsmall-12 column--small-3 column--medium-3 sidebar">
+                        <div class="column--inner">
+                            <section class="aside">
+                                <div class="aside--box">
+                                    <h3 class="aside--box_title typo-delta"><i class="fa fa-info fa-ml"></i>معرفی رویداد</h3>
+                                    <p><b>اولین همایش آیندها وب؛</b> چهارشنبه، پنج‌شنبه ۱۵، ۱۶ مهر ماه ۱۳۹۴.</p>
+                                </div>
+                            </section>
+                        </div>
+                    </aside>
+                    <section class="column--xsmall-12 column--small-9 container">
+                        <div class="column--inner">
+                            <article class="content">
+                                <div class="wrap-row top">
+                                    <section class="column--xsmall-12 column--small-6">
+                                        <h2 class="typo-delta">اولین همایش آینده طراحی وب</h2>
+                                        <p>
+                                            همایش آینده طراحی وب (Future of Web Design) یک رویداد دو روزه برای طراحان و توسعه‌دهندگان Front–End است که می‌خواهند اثری متفاوت در
+                                            وب فارسی ایجاد کنند و از تجربیات و تخصص کسانی که دستی به آتش دارند استفاده کنند. در این
+                                            رویداد علاوه بر مباحث و ارائه‌های فنی و تخصصی در حوزه وب و آینده طراحی وب، مسایل مربوط
+                                            به راه‌اندازی کسب‌وکارهای نوپا در حوزه وب نیز مطرح و صاحبین کسب‌وکارهای موفق در این حوزه
+                                            سخنرانی خواهند داشت.
+                                            <br>این رویداد علاوه بر اینکه بصورت حضوری برگزار می‌گردد، بصورت زنده و آنلاین نیز پوشش داده
+                                            خواهد شد تا علاقمندان خارج از کشور و کسانی که امکان حضور ندارند بتوانند بصورت آنلاین در
+                                            این رویداد شرکت کنند.</p>
+                                        <h3 class="typo-zeta">مزایای شرکت در این همایش</h3>
+                                        <ul>
+                                            <li>آشنایی با جدیدترین متدهای طراحی وب</li>
+                                            <li>استفاده از تجربیات افراد موفق در این حوزه</li>
+                                            <li>شبکه‌سازی و برقرای ارتباط با سایر اهالی وب</li>
+                                            <li>دریافت گواهی شرکت در همایش</li>
+                                            <li>دو روز خوش همراه با یادگیری و شبکه‌سازی</li>
+                                        </ul>
+                                    </section>
+                                    <section class="column--xsmall-12 column--small-6">
+                                        <picture class="hero--cover">
+                                            <img src="dist/img/fowd-iran.jpg" srcset="dist/img/fowd-iran@2x.jpg 2x" alt="اولین همایش آینده طراحی وب">
+                                        </picture>
+                                    </section>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <!-- -- /Introduction -- -->
+            <!-- -- Hashtag -- -->
+            <section class="hashtag on-navigation">
+                <div class="wrap">
+                    <div class="wrap-row center">
+                        <div class="column--xsmall-12">
+                            <header class="hashtag-head">
+                                <h5>
+                                    از هش‌تگ
+                                    <a href="https://twitter.com/intent/tweet?hashtags=FOWDConf94&amp;via=wsschool_org" target="_blank"
+                                    dir="ltr"> <i class="fa fa-twitter"></i>FOWDConf94</a> در شبکه‌های اجتماعی استفاده کنید</h5>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="wrap-row center"><a href="http://telegram.me/wsschool" target="_blank" class="button radius button-blue-accent">به کانال تلگرام مدرسه استانداردهای وب بپیوندید</a></div>
+                </div>
+            </section>
+            <!-- -- /Hashtag -- -->
+            <!-- -- Speakers -- -->
+            <section id="speakers" class="section wrap">
+                <section class="wrap-row wrap-is-border">
+                    <aside class="column--xsmall-12 column--small-3 column--medium-3 sidebar">
+                        <div class="column--inner">
+                            <section class="aside">
+                                <div class="aside--box">
+                                    <h3 class="aside--box_title typo-delta"><i class="fa fa-microphone fa-ml"></i>سخنران‌ها</h3>
+                                    <p>در اولین همایش آینده طراحی وب چه کسانی در کنار شما حضور خواهند داشت؟</p>
+                                </div>
+                            </section>
+                        </div>
+                    </aside>
+                    <section class="column--xsmall-12 column--small-9 container">
+                        <div class="column--inner">
+                            <article class="content">
+                                <h3 class="typo-delta">ارائه دهندگان</h3>
+                                <div class="wrap-row center">
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-amirabbasabdolali" class="people">
+                                            <img src="dist/img/people/avatar-amirabbasabdolali.jpg" alt="امیرعباس عبدالعلی" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">امیرعباس عبدالعلی</h2><b class="people--overlay-position">طراح و توسعه دهنده وب</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-arashmilani" class="people">
+                                            <img src="dist/img/people/avatar-arashmilani.jpg" alt="آرش میلانی" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">آرش میلانی</h2><b class="people--overlay-position">طراح و توسعه دهنده وب</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-parhambaghestani" class="people">
+                                            <img src="dist/img/people/avatar-parhambaghestani.jpg" alt="پرهام باغستانی" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">پرهام باغستانی</h2><b class="people--overlay-position">طراح تجربه ‌کاربری و رابط‌کاربری</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-shahotofani" class="people">
+                                            <img src="dist/img/people/avatar-shahotofani.jpg" alt="شاهو طوفانی" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">شاهو طوفانی</h2><b class="people--overlay-position">طراح و توسعه‌دهنده وب</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-jadi" class="people">
+                                            <img src="dist/img/people/avatar-jadi.jpg" alt="جادی میرمیرانی" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">جادی میرمیرانی</h2><b class="people--overlay-position">گیک و طرفدار متن‌باز</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-alinematishahab" class="people">
+                                            <img src="dist/img/people/avatar-alinematishahab.jpg" alt="علی نعمتی‌شهاب" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">علی نعمتی‌شهاب</h2><b class="people--overlay-position">تحلیل‌گر سیستم و کسب‌وکار</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-salehsozanchi" class="people">
+                                            <img src="dist/img/people/avatar-salehsozanchi.jpg" alt="صالح سوزنچی" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">صالح سوزنچی</h2><b class="people--overlay-position">توسعه دهنده نرم‌افزار</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-sallarkaboli" class="people">
+                                            <img src="dist/img/people/avatar-sallarkaboli.jpg" alt="سالار کابلی" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">
+                                                    <span data-title="از طریق اسکایپ" class="tiny"><i class="fa fa-skype icon-remote"></i></span>سالار کابلی</h2><b class="people--overlay-position">توسعه‌دهنده نرم‌افزار کیاسکد</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-perrymitchell" class="people">
+                                            <img src="dist/img/people/avatar-perrymitchell.jpg" alt="پری میچل" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">
+                                                    <span data-title="از طریق اسکایپ" class="tiny"><i class="fa fa-skype icon-remote"></i></span>پری میچل</h2><b class="people--overlay-position">توسعه‌دهنده ارشد نرم‌افزار کیاسکد</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-mohsentaleb" class="people">
+                                            <img src="dist/img/people/avatar-mohsentaleb.jpg" alt="محسن طالب" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">محسن طالب</h2><b class="people--overlay-position">طراح رابط کاربری</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-miladislamizad" class="people">
+                                            <img src="dist/img/people/avatar-miladislamizad.jpg" alt="میلاد اسلامی‌زاد" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">میلاد اسلامی‌زاد</h2><b class="people--overlay-position">توسعه‌دهنده کسب و کار</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-davoodtorabzadeh" class="people">
+                                            <img src="dist/img/people/avatar-davoodtorabzadeh.jpg" alt="داوود تراب‌زاده" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">داوود تراب‌زاده</h2><b class="people--overlay-position">طراح تجربه ‌کاربری</b></figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-asalrad" class="people">
+                                            <img src="dist/img/people/avatar-asalrad.jpg" alt="عسل راد" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">عسل راد</h2><b class="people--overlay-position">توسعه‌دهنده کسب و کار</b></figcaption>
+                                        </figure>
+                                    </section>
+                                </div>
+                                <h3 class="typo-delta">سخنرانان</h3>
+                                <div class="wrap-row center">
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-shahintabary" class="people">
+                                            <img src="dist/img/people/avatar-shahintabary.jpg" alt="شاهین طبری" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">شاهین طبری</h2><b class="people--overlay-position">موسس و رییس هیئت مدیره چارگون</b>
+                                            </figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-bahramsadeghi" class="people">
+                                            <img src="dist/img/people/avatar-bahramsadeghi.jpg" alt="دکتر بهرام صادقی" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">دکتر بهرام صادقی</h2><b class="people--overlay-position">استاد دانشگاه</b>
+                                            </figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-shahabjavanmardi" class="people">
+                                            <img src="dist/img/people/avatar-shahabjavanmardi.jpg" alt="شهاب جوانمردی" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">شهاب جوانمردی</h2><b class="people--overlay-position">مدیرعامل فناپ</b>
+                                            </figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-majidalavizadeh" class="people">
+                                            <img src="dist/img/people/avatar-majidalavizadeh.jpg" alt="مجید علوی‌زاده" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">مجید علوی‌زاده</h2><b class="people--overlay-position">موسس مجیدآنلاین و توسعه‌دهنده</b>
+                                            </figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-atakhalighi" class="people">
+                                            <img src="dist/img/people/avatar-atakhalighi.jpg" alt="عطا خلیقی" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">عطا خلیقی</h2><b class="people--overlay-position">موسس پرشین‌بلاگ و ارانیکو</b>
+                                            </figcaption>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-4 column--medium-3">
+                                        <figure id="people-arashbarahmand" class="people">
+                                            <img src="dist/img/people/avatar-arashbarahmand.jpg" alt="آرش برهمند" class="people-image">
+                                            <figcaption class="people--overlay">
+                                                <h2 class="people--overlay-title typo-epsilon">آرش برهمند</h2><b class="people--overlay-position">سردبیر ماهنامه پیوست</b>
+                                            </figcaption>
+                                        </figure>
+                                    </section>
+                                </div>
+                                <div class="wrap-row">
+                                    <section class="column--xsmall-12">
+                                        <figure class="nested">
+                                            <img src="dist/img/people/avatar-mahdisorouri.jpg" alt="مهدی سروری" class="nested-image">
+                                            <figcaption class="nested--content">
+                                                <h4 class="nested--content-title typo-zeta">مجری برنامه: </h4>
+                                                <p>
+                                                    مهدی سروری؛
+                                                    <small>ژورنالسیت و مجری همایش</small>
+                                                </p>
+                                            </figcaption>
+                                        </figure>
+                                    </section>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <!-- -- /Speakers -- -->
+            <!-- -- Panels -- -->
+            <section id="panels" class="section wrap">
+                <section class="wrap-row wrap-is-border">
+                    <aside class="column--xsmall-12 column--small-3 column--medium-3 sidebar">
+                        <div class="column--inner">
+                            <section class="aside">
+                                <div class="aside--box">
+                                    <h3 class="aside--box_title typo-delta"><i class="fa fa-puzzle-piece fa-ml"></i>پنل‌ها</h3>
+                                    <p>موضوعاتی که به صورتی گروهی در مورد آن‌ها بحث خواهد شد.</p>
+                                </div>
+                            </section>
+                        </div>
+                    </aside>
+                    <section class="column--xsmall-12 column--small-9 container">
+                        <div class="column--inner">
+                            <article class="content">
+                                <div class="wrap-row center">
+                                    <section class="column--xsmall-12 column--small-6">
+                                        <section id="panel-box-1" class="gray--box">
+                                            <div class="column--inner">
+                                                <h6 class="gray--box-title">پنل روز اول: هر وﺏ‌سایت یک رسانه</h6>
+                                                <div class="wrap-row center">
+                                                    <section class="column--xsmall-6 column--small-12 column--medium-4">
+                                                        <figure id="people-manighasemi" class="people">
+                                                            <img src="dist/img/people/avatar-manighasemi.jpg" alt="مانی قاسمی" class="people-image is-small">
+                                                            <figcaption class="people--overlay"><b class="people--overlay-title">مانی قاسمی</b></figcaption>
+                                                        </figure>
+                                                    </section>
+                                                    <section class="column--xsmall-6 column--small-12 column--medium-4">
+                                                        <figure id="people-drfarahani" class="people">
+                                                            <img src="dist/img/people/avatar-drfarahani.jpg" alt="دکتر فراهانی" class="people-image is-small">
+                                                            <figcaption class="people--overlay"><b class="people--overlay-title">دکتر فراهانی</b></figcaption>
+                                                        </figure>
+                                                    </section>
+                                                    <section class="column--xsmall-6 column--small-12 column--medium-4">
+                                                        <figure id="people-sbehjati" class="people">
+                                                            <img src="dist/img/people/avatar-sbehjati.jpg" alt="سجاد بهجتی" class="people-image is-small">
+                                                            <figcaption class="people--overlay"><b class="people--overlay-title">سجاد بهجتی</b></figcaption>
+                                                        </figure>
+                                                    </section>
+                                                    <section class="column--xsmall-6 column--small-12 column--medium-4">
+                                                        <figure id="people-jadi" class="people">
+                                                            <img src="dist/img/people/avatar-jadi.jpg" alt="جادی میرمیرانی" class="people-image is-small">
+                                                            <figcaption class="people--overlay"><b class="people--overlay-title">جادی میرمیرانی</b></figcaption>
+                                                        </figure>
+                                                    </section>
+                                                    <section class="column--xsmall-6 column--small-12 column--medium-4">
+                                                        <figure id="people-atakhalighi" class="people">
+                                                            <img src="dist/img/people/avatar-atakhalighi.jpg" alt="عطا خلیقی" class="people-image is-small">
+                                                            <figcaption class="people--overlay"><b class="people--overlay-title">عطا خلیقی</b></figcaption>
+                                                        </figure>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </section>
+                                    <section class="column--xsmall-12 column--small-6">
+                                        <section id="panel-box-2" class="gray--box">
+                                            <div class="column--inner">
+                                                <h6 class="gray--box-title">پنل روز دوم: چالش نیرﻭﯼ انسانی</h6>
+                                                <div class="wrap-row center">
+                                                    <section class="column--xsmall-6 column--small-12 column--medium-4">
+                                                        <figure id="people-pouyamahmoodian" class="people">
+                                                            <img src="dist/img/people/avatar-pouyamahmoodian.jpg" alt="پویا محمودیان" class="people-image is-small">
+                                                            <figcaption class="people--overlay"><b class="people--overlay-title">پویا محمودیان</b></figcaption>
+                                                        </figure>
+                                                    </section>
+                                                    <section class="column--xsmall-6 column--small-12 column--medium-4">
+                                                        <figure id="people-mjshakouri" class="people">
+                                                            <img src="dist/img/people/avatar-mjshakouri.jpg" alt="محمدجواد شکوری" class="people-image is-small">
+                                                            <figcaption class="people--overlay"><b class="people--overlay-title">محمدجواد شکوری</b></figcaption>
+                                                        </figure>
+                                                    </section>
+                                                    <section class="column--xsmall-6 column--small-12 column--medium-4">
+                                                        <figure id="people-nimanourmohammadi" class="people">
+                                                            <img src="dist/img/people/avatar-nimanourmohammadi.jpg" alt="نیما نور محمدی"
+                                                            class="people-image is-small">
+                                                            <figcaption class="people--overlay"><b class="people--overlay-title">نیما نور محمدی</b></figcaption>
+                                                        </figure>
+                                                    </section>
+                                                    <section class="column--xsmall-6 column--small-12 column--medium-4">
+                                                        <figure id="people-shahintabary" class="people">
+                                                            <img src="dist/img/people/avatar-shahintabary.jpg" alt="شاهین طبری" class="people-image is-small">
+                                                            <figcaption class="people--overlay"><b class="people--overlay-title">شاهین طبری</b></figcaption>
+                                                        </figure>
+                                                    </section>
+                                                    <section class="column--xsmall-6 column--small-12 column--medium-4">
+                                                        <figure id="people-majidalavizadeh" class="people">
+                                                            <img src="dist/img/people/avatar-majidalavizadeh.jpg" alt="مجید علوی‌زاده"
+                                                            class="people-image is-small">
+                                                            <figcaption class="people--overlay"><b class="people--overlay-title">مجید علوی‌زاده</b></figcaption>
+                                                        </figure>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </section>
+                                </div>
+                                <div class="wrap-row">
+                                    <section class="column--xsmall-12">
+                                        <figure class="nested">
+                                            <img src="dist/img/people/avatar-arashbarahmand.jpg" alt="آرش برهمند" class="nested-image">
+                                            <figcaption class="nested--content">
+                                                <h4 class="nested--content-title typo-zeta">گرداننده پنل: </h4>
+                                                <p>آرش برهمند</p>
+                                            </figcaption>
+                                        </figure>
+                                    </section>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <!-- -- /Panels -- -->
+            <!-- -- Schedule -- -->
+            <section id="schedule" class="section wrap">
+                <section class="wrap-row wrap-is-border">
+                    <aside class="column--xsmall-12 column--small-3 column--medium-3 sidebar">
+                        <div class="column--inner">
+                            <section class="aside">
+                                <div class="aside--box">
+                                    <h3 class="aside--box_title typo-delta"><i class="fa fa-calendar fa-ml"></i>برنامه برگزاری</h3>
+                                    <p>در همایش آینده طراحی وب چه خواهد گذشت؟</p>
+                                </div>
+                            </section>
+                        </div>
+                    </aside>
+                    <section class="column--xsmall-12 column--small-9 container">
+                        <div class="column--inner">
+                            <article class="content">
+                                <h4>کنداکتور رویداد
+                                    <span class="badge-blue-accent badge-small">کامل خواهد شد</span>
+                                </h4>
+                                <section class="progress hide-on-small"><b class="progress-title"> 
+روز اول (<i class="fa fa-sun-o"></i>) بر روی نمودار:</b>
+                                    <div class="progress--body">
+                                        <figure class="progress-line">
+                                            <span class="label">۰۸:۰۰</span>
+                                            <span class="label">۱۷:۰۰</span><a data-title="۰۸:۰۰ — ۰۹:۰۰؛ پذیرش و پذیرایی صبحانه" style="right: 0%" href="#schedule-1"
+                                            class="pin pin-normal"><i class="fa fa-coffee"></i></a><a data-title="۰۹:۰۰ — ۱۰:۳۰؛ افتتاحیه و سخنرانی"
+                                            style="right: 7.1%" href="#schedule-2" class="pin pin-normal"><i class="pin-normal"></i></a>
+                                            <a
+                                            data-title="۱۰:۳۰ — ۱۱:۰۰؛ استرﺍحت و پذیرﺍیی" style="right: 14.2%" href="#schedule-3" class="pin pin-normal"><i class="fa fa-coffee"></i></a><a data-title="۱۱:۰۰ — ۱۱:۳۰؛ ماشین زمان یادگیری فنوﻥ، اﺯ گذشته تا آینده وﺏ"
+                                                style="right: 21.299999999999997%" href="#schedule-4" class="pin pin-featured"><i class="fa fa-slideshare"></i></a>
+                                                <a
+                                                data-title="۱۱:۳۰ — ۱۱:۴۵؛ آینده طراحی وب سایت" style="right: 28.4%" href="#schedule-5"
+                                                class="pin pin-featured"><i class="fa fa-microphone"></i></a><a data-title="۱۱:۴۵ — ۱۲:۱۵؛ آینده طراحی لی‌اوت وب‌سایت‌ها، ماژول گرید در دسترس‌تر از همیشه."
+                                                    style="right: 35.5%" href="#schedule-6" class="pin pin-featured"><i class="fa fa-slideshare"></i></a>
+                                                    <a
+                                                    data-title="۱۲:۱۵ — ۱۲:۳۰؛ سایت به مثابه ﺭسانه" style="right: 42.599999999999994%"
+                                                    href="#schedule-7" class="pin pin-featured"><i class="fa fa-microphone"></i></a>
+                                                        <a data-title="۱۲:۳۰ — ۱۳:۴۵؛ ناهار، نماز و استراحت"
+                                                        style="right: 49.699999999999996%" href="#schedule-8" class="pin pin-normal"><i class="fa fa-cutlery"></i></a><a data-title="۱۴:۰۰ — ۱۴:۳۰؛ آینده جاوااسکریپت، ES6 و بعد از آن"
+                                                        style="right: 56.8%" href="#schedule-9" class="pin pin-featured"><i class="fa fa-microphone"></i></a>
+                                                        <a
+                                                        data-title="۱۴:۳۰ — ۱۵:۳۰؛ پنل روز اول: هر وب‌سایت یک رسانه" style="right: 63.9%"
+                                                        href="#schedule-10" class="pin pin-featured"><i class="fa fa-puzzle-piece"></i></a><a data-title="۱۵:۳۰ — ۱۶:۰۰؛ استرﺍحت و پذیرﺍیی"
+                                                            style="right: 71%" href="#schedule-11" class="pin pin-normal"><i class="fa fa-coffee"></i></a>
+                                                            <a
+                                                            data-title="۱۶:۰۰ — ۱۶:۳۰؛ خط، محتوا ﻭ فونت فاﺭسی، ﺍﺯ گذشته تا ﺁیندﻩ" style="right: 78.1%"
+                                                            href="#schedule-12" class="pin pin-featured"><i class="fa fa-slideshare"></i></a>
+                                                                <a data-title="۱۶:۳۰ — ۱۶:۴۵؛ سواد رسانه ای در آینده طراحی وب و دنیای دیجیتال"
+                                                                style="right: 85.19999999999999%" href="#schedule-13" class="pin pin-featured"><i class="fa fa-microphone"></i></a>
+                                                                <a data-title="۱۶:۴۵ — ۱۷:۱۵؛ Workflow طراحی مدرن با استفاﺩﻩ اﺯ Gulpjs"
+                                                                style="right: 92.3%" href="#schedule-14" class="pin pin-featured"><i class="fa fa-slideshare"></i></a>
+                                                                <a data-title="۱۷:۳۰ — ۱۸:۰۰؛ شبکه‌سازی"
+                                                                style="right: 99.39999999999999%" href="#schedule-15" class="pin pin-normal"><i class="pin-normal"></i></a>
+                                        </figure>
+                                    </div>
+                                </section>
+                                <section class="table">
+                                    <header class="table-row table-head_featured">
+                                        <div class="wrap-row">
+                                            <div class="column--xsmall-12">
+                                                <div class="column--inner"><i class="fa fa-sun-o fa-ml"></i>چهارشنبه ۱۵ مهر ماه ۱۳۹۴ — روز اول:</div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <!-- header.table-row.table-head.wrap-row.center
+	.column--small-2.column--xsmall-12
+		.column--inner مشخصات
+	.column--small-10.column--xsmall-12
+		.column--inner رویداد
+-->
+                                    <section id="schedule-1" class="table-row">
+                                        <div class="wrap-row middle">
+                                            <div class="column--small-2 column--xsmall-12">
+                                                <div class="column--inner">
+                                                    <time class="gray"><b>۰۸:۰۰ — ۰۹:۰۰</b></time>
+                                                </div>
+                                            </div>
+                                            <div class="column--small-10 column--xsmall-12">
+                                                <div class="column--inner">
+                                                    <h6><i class="fa fa-coffee fa-ml black-light"></i>پذیرش و پذیرایی صبحانه</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section id="schedule-2" class="table-row">
+                                        <div class="wrap-row middle">
+                                            <div class="column--small-2 column--xsmall-12">
+                                                <div class="column--inner">
+                                                    <time class="gray"><b>۰۹:۰۰ — ۱۰:۳۰</b></time>
+                                                </div>
+                                            </div>
+                                            <div class="column--small-10 column--xsmall-12">
+                                                <div class="column--inner">
+                                                    <h6 class="gray">افتتاحیه و سخنرانی</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section id="schedule-3" class="table-row">
+                                        <div class="wrap-row middle">
+                                            <div class="column--small-2 column--xsmall-12">
+                                                <div class="column--inner">
+                                                    <time class="gray"><b>۱۰:۳۰ — ۱۱:۰۰</b></time>
+                                                </div>
+                                            </div>
+                                            <div class="column--small-10 column--xsmall-12">
+                                                <div class="column--inner">
+                                                    <h6><i class="fa fa-coffee fa-ml black-light"></i>استرﺍحت و پذیرﺍیی</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section id="schedule-4" class="table-row">
+                                        <div class="wrap-row middle">
+                                            <div class="column--small-2 column--xsmall-12">
+                                                <div class="column--inner">
+                                                    <time class="gray"><b>۱۱:۰۰ — ۱۱:۳۰</b></time>
+                                                </div>
+                                            </div>
+                                            <div class="column--small-10 column--xsmall-12">
+                                                <div class="column--inner">
+                                                    <h6><i class="fa fa-slideshare fa-ml black-light"></i>ارائه: ماشین زمان یادگیری فنوﻥ،
+                                                        اﺯ گذشته تا آینده وﺏ</h6><a href="#people-arashmilani"><b>آرش میلانی</b></a>
+                                                    <div
+                                                    class="table-row-more">
+                                                        <span class="badge-blue-light badge-medium hide-on-small">چکیده ارائه</span>
+                                                        <div class="table-row-more_overlay">
+                                                            <p><b class="hide-on-small">آرش میلانی خواهد گفت: </b>در تاریخ بشر برای سال‌های
+                                                                طولانی نحوه یادگیری علوم و فنون مختلف تنها از طریق رابطه استاد و شاگردی
+                                                                بود. گویا که شاگرد ظرفی خالی است و استاد وظیفه پر کردن آن ظرف با دانش
+                                                                را دارد. ما این روش را در مدرسه و دانشگاه تجربه کردیم و هنوز هم با
+                                                                نگاه به اطرافمان می‌توانیم آثار این روش را ببینیم. در سال‌های اخیر
+                                                                این روش تغییر کرد و رابطه استاد و شاگردی تعاملی‌تر شد، در این روش بیشتر
+                                                                اوقات استاد در حال پاسخ دادن به سوالات افراد هست. افراد انتظار دارند
+                                                                که استاد پاسخ «درست» همه سوالات آن‌ها را داشته باشد. اگر در کارگاه‌‌های
+                                                                عملی به معنای واقعی اون شرکت کرده باشید با این نوع یادگیری آشنا هستید.
+                                                                اما با توجه به سرعت پیشرفت علوم مختلف و به‌ویژه ابزارها، زبان‌ها، چهارچوب‌ها
+                                                                و APIهای مختلف وب عملن استفاده از روش‌های بالا علاوه بر اینکه هزینه
+                                                                زیادی دارد، جوابگوی نیاز طراحان و برنامه‌نویسان وب نیست. آرش میلانی
+                                                                در این ارایه سعی خواهد کرد در مورد روش سوم یادگیری که بر پایه خودآموزی
+                                                                و اشتراک دانش هست صحبت کند و روش‌ها عملی اینکار را بررسی کند.</p>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        </div>
+                        </section>
+                        <section id="schedule-5" class="table-row">
+                            <div class="wrap-row middle">
+                                <div class="column--small-2 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <time class="gray"><b>۱۱:۳۰ — ۱۱:۴۵</b></time>
+                                    </div>
+                                </div>
+                                <div class="column--small-10 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <h6><i class="fa fa-microphone fa-ml black-light"></i>سخنرانی: آینده طراحی وب سایت</h6><a href="#people-majidalavizadeh"><b>مجید علوی‌زاده</b></a></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="schedule-6" class="table-row">
+                            <div class="wrap-row middle">
+                                <div class="column--small-2 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <time class="gray"><b>۱۱:۴۵ — ۱۲:۱۵</b></time>
+                                    </div>
+                                </div>
+                                <div class="column--small-10 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <h6><i class="fa fa-slideshare fa-ml black-light"></i>ارائه: آینده طراحی لی‌اوت وب‌سایت‌ها، ماژول
+                                            گرید در دسترس‌تر از همیشه.</h6><a href="#people-shahotofani"><b>شاهو طوفانی</b></a>
+                                        <div
+                                        class="table-row-more">
+                                            <span class="badge-blue-light badge-medium hide-on-small">چکیده ارائه</span>
+                                            <div class="table-row-more_overlay">
+                                                <p><b class="hide-on-small">شاهو طوفانی خواهد گفت: </b>چیدمان قالب وب سایت ها در دهه‌ی
+                                                    اخیر روش‌های زیادی بخود دیده، زمانی جداول (Table) یکه تاز چارچوب بندی صفحات وب
+                                                    بود، با فراگیر شده CSS و مطرح شدن ماژول‌های جدید، بحث جداکردن ساختار از محتوی هر
+                                                    روز پررنگ تر میشود. در این ارائه با مرور مختصری بر روشهای لی‌اوت زنی صفحات از جداول،
+                                                    Float و فلکس باکس، به معرفی جدیدترین ماژول ارائه شده توسط کنسرسیوم وب یعنی Grid
+                                                    پرداخته و با مطرح کردن مثالهایی به جزییات، مشخصات، روش‌ها و آینده صفحه‌بندی وب
+                                                    و ماژول گرید می‌پردازد.</p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </section>
+                        <section id="schedule-7" class="table-row">
+                            <div class="wrap-row middle">
+                                <div class="column--small-2 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <time class="gray"><b>۱۲:۱۵ — ۱۲:۳۰</b></time>
+                                    </div>
+                                </div>
+                                <div class="column--small-10 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <h6><i class="fa fa-microphone fa-ml black-light"></i>سخنرانی: سایت به مثابه ﺭسانه</h6><a href="#people-arashbarahmand"><b>آرش برهمند</b></a></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="schedule-8" class="table-row">
+                            <div class="wrap-row middle">
+                                <div class="column--small-2 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <time class="gray"><b>۱۲:۳۰ — ۱۳:۴۵</b></time>
+                                    </div>
+                                </div>
+                                <div class="column--small-10 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <h6><i class="fa fa-cutlery fa-ml black-light"></i>ناهار، نماز و استراحت</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="schedule-9" class="table-row">
+                            <div class="wrap-row middle">
+                                <div class="column--small-2 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <time class="gray"><b>۱۴:۰۰ — ۱۴:۳۰</b></time>
+                                    </div>
+                                </div>
+                                <div class="column--small-10 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <h6><i class="fa fa-microphone fa-ml black-light"></i>سخنرانی: آینده جاوااسکریپت، ES6 و بعد از
+                                            آن</h6><a href="#people-sallarkaboli"><b>سالار کابلی</b></a></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="schedule-10" class="table-row">
+                            <div class="wrap-row middle">
+                                <div class="column--small-2 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <time class="gray"><b>۱۴:۳۰ — ۱۵:۳۰</b></time>
+                                    </div>
+                                </div>
+                                <div class="column--small-10 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <h6><i class="fa fa-puzzle-piece fa-ml black-light"></i>پنل روز اول: هر وب‌سایت یک رسانه</h6>
+                                        <a
+                                        href="#people-manighasemi"><b>مانی قاسمی</b></a>
+                                            <span>، </span><a href="#people-drfarahani"><b>دکتر فراهانی</b></a>
+                                            <span>، </span><a href="#people-sbehjati"><b>سجاد بهجتی</b></a>
+                                            <span>، </span><a href="#people-jadi"><b>جادی میرمیرانی</b></a>
+                                            <span>، </span><a href="#people-atakhalighi"><b>عطا خلیقی</b></a>
+                                            <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="schedule-11" class="table-row">
+                            <div class="wrap-row middle">
+                                <div class="column--small-2 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <time class="gray"><b>۱۵:۳۰ — ۱۶:۰۰</b></time>
+                                    </div>
+                                </div>
+                                <div class="column--small-10 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <h6><i class="fa fa-coffee fa-ml black-light"></i>استرﺍحت و پذیرﺍیی</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="schedule-12" class="table-row">
+                            <div class="wrap-row middle">
+                                <div class="column--small-2 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <time class="gray"><b>۱۶:۰۰ — ۱۶:۳۰</b></time>
+                                    </div>
+                                </div>
+                                <div class="column--small-10 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <h6><i class="fa fa-slideshare fa-ml black-light"></i>ارائه: خط، محتوا ﻭ فونت فاﺭسی، ﺍﺯ گذشته تا
+                                            ﺁیندﻩ</h6><a href="#people-salehsozanchi"><b>صالح سوزنچی</b></a></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="schedule-13" class="table-row">
+                            <div class="wrap-row middle">
+                                <div class="column--small-2 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <time class="gray"><b>۱۶:۳۰ — ۱۶:۴۵</b></time>
+                                    </div>
+                                </div>
+                                <div class="column--small-10 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <h6><i class="fa fa-microphone fa-ml black-light"></i>سخنرانی: سواد رسانه ای در آینده طراحی وب
+                                            و دنیای دیجیتال</h6><a href="#people-bahramsadeghi"><b>بهرام صادقی</b></a></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="schedule-14" class="table-row">
+                            <div class="wrap-row middle">
+                                <div class="column--small-2 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <time class="gray"><b>۱۶:۴۵ — ۱۷:۱۵</b></time>
+                                    </div>
+                                </div>
+                                <div class="column--small-10 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <h6><i class="fa fa-slideshare fa-ml black-light"></i>ارائه: Workflow طراحی مدرن با استفاﺩﻩ اﺯ
+                                            Gulpjs</h6><a href="#people-amirabbasabdolali"><b>امیرعباس عبدالعلی</b></a>
+                                        <div class="table-row-more">
+                                            <span class="badge-blue-light badge-medium hide-on-small">چکیده ارائه</span>
+                                            <div class="table-row-more_overlay">
+                                                <p><b class="hide-on-small">امیرعباس عبدالعلی خواهد گفت: </b>امروزه طراحی اینترفیس وب
+                                                    سایت دارای جزئیات بسیاری است. طراح باید موارد بسیاری را در طراحی خود لحاظ کند.
+                                                    مواردی همچون بهینه و فشرده سازی تصاویر، کاهش http request ها از طریق متصل کردن
+                                                    فایل های JS به هم، فشرده سازی فایل های JS و CSS برای کاهش حجم صفحه و بسیاری از
+                                                    موارد دیگر. انجام همه این امور به شکل دستی کاری بسیار زمان بر است. خوشبختانه در
+                                                    حال حاضر ابزارهایی در دسترس طراحان قرار گرفته که بسیاری از این اعمال را به شکل
+                                                    اتوماتیک برای طراح انجام می‌دهد. Gulp.js یکی از این ابزارهاست.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="schedule-15" class="table-row">
+                            <div class="wrap-row middle">
+                                <div class="column--small-2 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <time class="gray"><b>۱۷:۳۰ — ۱۸:۰۰</b></time>
+                                    </div>
+                                </div>
+                                <div class="column--small-10 column--xsmall-12">
+                                    <div class="column--inner">
+                                        <h6 class="gray">شبکه‌سازی</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        </section>
+                        <hr data-content="اتمام روز اول. آغاز روز دوم:" class="fancy">
+                        <section class="progress hide-on-small"><b class="progress-title"> 
+روز دوم (<i class="fa fa-sun-o"></i>) بر روی نمودار:</b>
+                            <div class="progress--body">
+                                <figure class="progress-line">
+                                    <span class="label">۰۸:۰۰</span>
+                                    <span class="label">۱۷:۰۰</span><a data-title="۰۸:۰۰ — ۰۹:۰۰؛ پذیرایی صبحانه و خوش‌آمد گویی" style="right: 0%" href="#schedule-16"
+                                    class="pin pin-normal"><i class="fa fa-coffee"></i></a><a data-title="۰۹:۰۰ — ۰۹:۳۰؛ وﺏ پلتفرﻡ ﻭ وﺏ دﺭ ساﻝ ۲۰۲۰ به کجا خوﺍهد رسید؟"
+                                    style="right: 6.15%" href="#schedule-17" class="pin pin-featured"><i class="fa fa-slideshare"></i></a>
+                                    <a
+                                    data-title="۰۹:۳۰ — ۱۰:۰۰؛ نقش UX در آینده طراحی Landing Page ها" style="right: 12.3%" href="#schedule-18"
+                                    class="pin pin-featured"><i class="fa fa-slideshare"></i></a><a data-title="۱۰:۰۰ — ۱۰:۳۰؛ چرا ممکنه کار کردن به صورت آزاد به نفع شما باشه؟"
+                                        style="right: 18.450000000000003%" href="#schedule-19" class="pin pin-featured"><i class="fa fa-slideshare"></i></a>
+                                        <a
+                                        data-title="۱۰:۳۰ — ۱۱:۰۰؛ استرﺍحت و پذیرﺍیی" style="right: 24.6%" href="#schedule-20" class="pin pin-normal"><i class="fa fa-coffee"></i></a><a data-title="۱۱:۰۰ — ۱۱:۳۰؛ کاربرپژوهی در وب‌سایت‌ها و وب پرتال‌های سازمانی"
+                                            style="right: 30.75%" href="#schedule-21" class="pin pin-featured"><i class="fa fa-slideshare"></i></a>
+                                            <a
+                                            data-title="۱۱:۳۰ — ۱۱:۴۵؛ آینده و پرداخت" style="right: 36.900000000000006%" href="#schedule-22"
+                                            class="pin pin-featured"><i class="fa fa-microphone"></i></a>
+                                                <a data-title="۱۱:۴۵ — ۱۲:۱۵؛ آینده وب از منظر داده های مکانی و سرویس های مبتنی بر نقشه"
+                                                style="right: 43.050000000000004%" href="#schedule-23" class="pin pin-featured"><i class="fa fa-slideshare"></i></a><a data-title="۱۲:۱۵ — ۱۲:۳۰؛ توسعه اپلیکیشن B2B در آینده وب"
+                                                style="right: 49.2%" href="#schedule-24" class="pin pin-featured"><i class="fa fa-microphone"></i></a>
+                                                <a
+                                                data-title="۱۲:۳۰ — ۱۳:۴۵؛ ناهار، نماز و استراحت" style="right: 55.35%" href="#schedule-25"
+                                                class="pin pin-normal"><i class="fa fa-cutlery"></i></a><a data-title="۱۴:۰۰ — ۱۴:۳۰؛ Build tooling for a Lean Web Application Stack"
+                                                    style="right: 61.5%" href="#schedule-26" class="pin pin-featured"><i class="fa fa-microphone"></i></a>
+                                                    <a
+                                                    data-title="۱۴:۳۰ — ۱۵:۳۰؛ پنل روز دوم: چالش نیروﯼ انسانی" style="right: 67.65%"
+                                                    href="#schedule-28" class="pin pin-featured"><i class="fa fa-puzzle-piece"></i></a>
+                                                        <a data-title="۱۵:۳۰ — ۱۶:۰۰؛ استرﺍحت و پذیرﺍیی"
+                                                        style="right: 73.80000000000001%" href="#schedule-29" class="pin pin-normal"><i class="fa fa-coffee"></i></a><a data-title="۱۶:۰۰ — ۱۶:۳۰؛ آینده سوشال CRM در طراحی وبسایت"
+                                                        style="right: 79.95%" href="#schedule-30" class="pin pin-featured"><i class="fa fa-microphone"></i></a>
+                                                        <a
+                                                        data-title="۱۶:۳۰ — ۱۶:۴۵؛ —" style="right: 86.10000000000001%" href="#schedule-31"
+                                                        class="pin pin-featured"><i class="fa fa-microphone"></i></a><a data-title="۱۶:۴۵ — ۱۷:۱۵؛ پنج اشتباه کلیدی در طراحی کسب و کار های تحت وب"
+                                                            style="right: 92.25%" href="#schedule-32" class="pin pin-featured"><i class="fa fa-slideshare"></i></a>
+                                                            <a
+                                                            data-title="۱۷:۱۵ — ۱۸:۰۰؛ اختتامیه / سورپرایز!" style="right: 98.4%" href="#schedule-33"
+                                                            class="pin pin-normal"><i class="pin-normal"></i></a>
+                                </figure>
+                            </div>
+                        </section>
+                        <section class="table">
+                            <header class="table-row table-head_featured">
+                                <div class="wrap-row">
+                                    <div class="column--xsmall-12">
+                                        <div class="column--inner"><i class="fa fa-sun-o fa-ml"></i>پنج‌شنبه ۱۶ مهر ماه ۱۳۹۴ — روز دوم:</div>
+                                    </div>
+                                </div>
+                            </header>
+                            <!-- header.table-row.table-head.wrap-row.center
+	.column--small-2.column--xsmall-12
+		.column--inner مشخصات
+	.column--small-10.column--xsmall-12
+		.column--inner رویداد
+-->
+                            <section id="schedule-16" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۰۸:۰۰ — ۰۹:۰۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-coffee fa-ml black-light"></i>پذیرایی صبحانه و خوش‌آمد گویی</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="schedule-17" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۰۹:۰۰ — ۰۹:۳۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-slideshare fa-ml black-light"></i>ارائه: وﺏ پلتفرﻡ ﻭ وﺏ دﺭ ساﻝ ۲۰۲۰ به
+                                                کجا خوﺍهد رسید؟</h6><a href="#people-parhambaghestani"><b>پرهام باغستانی</b></a>
+                                            <div
+                                            class="table-row-more">
+                                                <span class="badge-blue-light badge-medium hide-on-small">چکیده ارائه</span>
+                                                <div class="table-row-more_overlay">
+                                                    <p><b class="hide-on-small">پرهام باغستانی خواهد گفت: </b>در آینده بسیاری از فناوری‌ها
+                                                        و نرم‌افزارها مبتنی بر وب خواهند بود و مفاهیم جدیدی مبتنی بر وب بوجود خواهد
+                                                        آمد که بستر ارائه دهنده خدمات متنوعی نظیر پرداخت در بستر وب، وب اشیاء، وب برای
+                                                        سخت‌افزارها و بستری برای تبادل داده‌ها مبتنی بر وب خواهد بود. در این ارائه
+                                                        به تاثیر وب بر روی سامانه‌های مختلف پرداخته خواهد شد که وب چگونه ابزارهای مختلف
+                                                        را تحت تاثیر خود قرار داده است و کنسرسیوم جهانی وب چگونه تلاش می‌کند تا با
+                                                        تدوین استاندارد همه حوزه‌ها را تحت پوشش قرار دهد.</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </section>
+                            <section id="schedule-18" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۰۹:۳۰ — ۱۰:۰۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-slideshare fa-ml black-light"></i>ارائه: نقش UX در آینده طراحی Landing
+                                                Page ها</h6><a href="#people-davoodtorabzadeh"><b>داوود تراب‌زاده</b></a>
+                                            <div class="table-row-more">
+                                                <span class="badge-blue-light badge-medium hide-on-small">چکیده ارائه</span>
+                                                <div class="table-row-more_overlay">
+                                                    <p><b class="hide-on-small">داوود تراب‌زاده خواهد گفت: </b>معمولا برای معرفی یک محصول
+                                                        یا خدمت یک صفحه فرود (landing page) طراحی می‌شود تا به وسیله‌ آن مشتری جلب
+                                                        کنند. اما اینکه چه مواردی را و چگونه در آن صفحه قرار دهیم موضوعی است که برروی
+                                                        نرخ تبدیل (conversion rate) بازدیدکنندگان به مشتری تاثیر قابل توجهی دارد. در
+                                                        این ارایه یه این می‌پردازیم که چگونه صفحه فرود را طراحی کنیم تا بیشترین تعداد
+                                                        مشتری را از میان بازدیدکنندگان داشته باشیم، موارد موفق و نکته‌های رفتار کاربران
+                                                        را بررسی می‌کنیم.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="schedule-19" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۰:۰۰ — ۱۰:۳۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-slideshare fa-ml black-light"></i>ارائه: چرا ممکنه کار کردن به صورت آزاد
+                                                به نفع شما باشه؟</h6><a href="#people-jadi"><b>جادی میرمیرانی</b></a></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="schedule-20" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۰:۳۰ — ۱۱:۰۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-coffee fa-ml black-light"></i>استرﺍحت و پذیرﺍیی</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="schedule-21" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۱:۰۰ — ۱۱:۳۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-slideshare fa-ml black-light"></i>ارائه: کاربرپژوهی در وب‌سایت‌ها و وب
+                                                پرتال‌های سازمانی</h6><a href="#people-miladislamizad"><b>میلاد اسلامی‌زاد</b></a>
+                                            <div
+                                            class="table-row-more">
+                                                <span class="badge-blue-light badge-medium hide-on-small">چکیده ارائه</span>
+                                                <div class="table-row-more_overlay">
+                                                    <p><b class="hide-on-small">میلاد اسلامی‌زاد خواهد گفت: </b>کاربرپژوهی به فرایندی
+                                                        گفته می‌شود که طی آن، مصرف کنندگان و مخاطبانِ محصول، خدمت و یا سرویسی شناسایی
+                                                        گشته و به طور مستمر مورد پایش و ارزیابی قرار می‌گیرند. در این ارائه، به اهمیت
+                                                        این موضوع در طراحی وب‌سایت‌ها و پرتال‌های سازمانی می‌پردازیم، محاسن و کارکردهایش
+                                                        را می‌شناسیم و روش‌هایی اجریی و عملیاتی را با هم بررسی می‌کنیم.</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </section>
+                            <section id="schedule-22" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۱:۳۰ — ۱۱:۴۵</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-microphone fa-ml black-light"></i>سخنرانی: آینده و پرداخت</h6><a href="#people-shahabjavanmardi"><b>شهاب جوانمردی</b></a>
+                                            <div
+                                            class="table-row-more">
+                                                <span class="badge-blue-light badge-medium hide-on-small">چکیده ارائه</span>
+                                                <div class="table-row-more_overlay">
+                                                    <p><b class="hide-on-small">شهاب جوانمردی خواهد گفت: </b>فراگیر شدن اینترنت و آشنایی
+                                                        بیشتر عموم مردم با آن، فرصت‌های بسیاری را در حوزه‌ی وب پدیدار کرده است. یکی
+                                                        از مهم‌ترین فرصت‌هایی که در این زمینه ایجاد شده، فراگیری استفاده از خدمات پرداخت
+                                                        اینترنتی است. این خدمات اگرچه بستری فنی و پیچیده دارند، اما وجه تعامل آن‌ها
+                                                        با مردم، صفحه‌های وب است. هم‌چنین، ورود پرداخت به صفحه‌های وب باعث ایجاد کسب
+                                                        و کارهای بسیاری شده که جان‌مایه‌ی بسیاری از وب‌سایت‌هاست. از این‌رو، توجه به
+                                                        طراحی وب‌سایت‌ها در حوزه‌ی پرداخت اهمیتی حیاتی و دوسویه دارد. در سال‌های اخیر
+                                                        تغییراتی بنیادین در حوزه‌های وابسته به وب و پرداخت رخ داده است. از توسعه‌ی
+                                                        دستگاه‌های همراه و افزایش دست‌رسی به اینترنت تا تغییرات شگرفی که در حوزه‌ی
+                                                        تجارت الکترونیکی ایجاد شده است. در این ارائه سعی می‌شود ابتدا به بررسی روندها
+                                                        و تغییراتی که در حوزه‌های مرتبط در حال رخ‌دادن است پرداخته شود. سپس با در نظر
+                                                        گرفتن ذی نفعان مختلف حوزه‌ی پرداخت وب شامل ارائه‌دهندگان سرویس و کاربران سایت
+                                                        و بررسی نیازمندی‌های آنان، پیشنهادهایی برای بهبود طراحی وب و افزایش کارایی
+                                                        در استفاده از ابزارهای پرداخت در وب‌سایت‌ها به مخاطبان ارائه شود.</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </section>
+                            <section id="schedule-23" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۱:۴۵ — ۱۲:۱۵</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-slideshare fa-ml black-light"></i>ارائه: آینده وب از منظر داده های مکانی
+                                                و سرویس های مبتنی بر نقشه</h6><a href="#people-mohsentaleb"><b>محسن طالب</b></a>
+                                            <div
+                                            class="table-row-more">
+                                                <span class="badge-blue-light badge-medium hide-on-small">چکیده ارائه</span>
+                                                <div class="table-row-more_overlay">
+                                                    <p><b class="hide-on-small">محسن طالب خواهد گفت: </b>در این ارائه سعی خواهد شد تا
+                                                        پس از بررسی تاریخچه مختصری از سرویس های مبتنی بر نقشه در ایران و جهان، به بسترهای
+                                                        فنی و اطلاعاتی لازم برای پیاده سازی این گونه سرویس ها اشاره شده و نمونه هایی
+                                                        از کاربردهای آن در نسل بعدی نرم افزارهای مکان محور ذکر شود.</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </section>
+                            <section id="schedule-24" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۲:۱۵ — ۱۲:۳۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-microphone fa-ml black-light"></i>سخنرانی: توسعه اپلیکیشن B2B در آینده
+                                                وب</h6><a href="#people-shahintabary"><b>شاهین طبری</b></a></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="schedule-25" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۲:۳۰ — ۱۳:۴۵</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-cutlery fa-ml black-light"></i>ناهار، نماز و استراحت</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="schedule-26" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۴:۰۰ — ۱۴:۳۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-microphone fa-ml black-light"></i>سخنرانی: Build tooling for a Lean Web
+                                                Application Stack</h6><a href="#people-perrymitchell"><b>پری میچل</b></a>
+                                            <div class="table-row-more">
+                                                <span class="badge-blue-light badge-medium hide-on-small">چکیده ارائه</span>
+                                                <div class="table-row-more_overlay">
+                                                    <p><b class="hide-on-small">پری میچل خواهد گفت: </b>اگر چه ابزارهایی مثل HTML و CSS
+                                                        به ما اجازه می‌دهند به راحتی در توسعه و طراحی نرم‌افزار از آنها استفاده کنیم،
+                                                        اما بهترین نحوه استفاده از آن‌ها برای ماشین‌ها با بهترین نحوه استفادشان با
+                                                        ما فرق دارد. راه‌هایی برای تبدیل بهترین حالت برای ما به بهترین حالت برای ماشین
+                                                        وجود دارند و ابزارهای ساخت (Build Tools) یکی از این روش‌ها هستند.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="schedule-28" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۴:۳۰ — ۱۵:۳۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-puzzle-piece fa-ml black-light"></i>پنل روز دوم: چالش نیروﯼ انسانی</h6>
+                                            <a
+                                            href="#people-pouyamahmoodian"><b>پویا محمودیان</b></a>
+                                                <span>، </span><a href="#people-mjshakouri"><b>محمدجواد شکوری</b></a>
+                                                <span>، </span><a href="#people-nimanourmohammadi"><b>نیما نور محمدی</b></a>
+                                                <span>، </span><a href="#people-shahintabary"><b>شاهین طبری</b></a>
+                                                <span>، </span><a href="#people-majidalavizadeh"><b>مجید علوی‌زاده</b></a>
+                                                <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="schedule-29" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۵:۳۰ — ۱۶:۰۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-coffee fa-ml black-light"></i>استرﺍحت و پذیرﺍیی</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="schedule-30" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۶:۰۰ — ۱۶:۳۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-microphone fa-ml black-light"></i>سخنرانی: آینده سوشال CRM در طراحی وبسایت</h6>
+                                            <a
+                                            href="#people-asalrad"><b>عسل راد</b></a>
+                                                <div class="table-row-more">
+                                                    <span class="badge-blue-light badge-medium hide-on-small">چکیده ارائه</span>
+                                                    <div class="table-row-more_overlay">
+                                                        <p><b class="hide-on-small">عسل راد خواهد گفت: </b>مدیریت ارتباط با مشتریان (CRM)
+                                                            به همه فرآیند ها و فناوری هایی گفته می شود که در شناسایی، ترغیب، گسترش،
+                                                            حفظ و ارائه خدمات بهتر به مشتریان به کار می رود. اصول مدیریت ارتباط با
+                                                            مشتری، چگونگی ایجاد موفق یک سیستم و اجرای آن را برای ارتباط با مشتریان
+                                                            از شروع و اجرای اولیه یک چنین سیستمی تا نگهداری آن در زمان های مختلف را
+                                                            بیان می کند. این اصول در کسب و کار های فیزیکی کاربرد داشت و با توجه به
+                                                            رقابت سخت موجود، به عنوان یک راهکار و مزیت رقابتی مهم مطرح می شد. اما کم
+                                                            کم شاهد حذف کسب و کارهای فیزیکی و شکل گیری کسب و کارهای آنلاین هستیم که
+                                                            روز به روز بر تعداد آن ها افزوده می شود و در حال تسخیر سهم بازار هستند.
+                                                            این روند از آینده ای خبر می دهد که ما برای بسیاری از احتیاجات و نیازهایمان
+                                                            به جای مراجعه به فروشگاه ها برای خرید و کسب اطلاعات، به فروشگاه های آنلاین
+                                                            مراجعه می کنیم و اطلاعات لازم را هم در وب سایت ها جستجو می کنیم. با گسترش
+                                                            تعداد این وب سایت ها و فروشگاه ها، داستان دنیای فیزیکی بار دیگر در دنیای
+                                                            دیجیتال تکرار می شود. دیگر کاربران اینترنت برای دریافت خدمات و محصولات
+                                                            با یک انتخاب مواجه نیستند و رقابت بر سر سهم بازار دوباره آغاز می شود. این
+                                                            جاست که توجه به مخاطب و مشتری به عنوان یک مزیت رقابتی پا به میدان گذاشته
+                                                            و حتی در آینده ای دورتر رعایت این اصول، از شرایط و پارامترهای بقای مجموعه
+                                                            محسوب خواهد شد. اگر بخواهیم خود را برای طراحی وب سایت ها و فروشگاه هایی
+                                                            آماده کنیم که در آینده هم بتوانند حرفی برای گفتن داشته باشند، باید با تغییر
+                                                            ماهیت اصول CRM در دنیای وب (E-CRM) آشنا شویم. نکاتی که در طراحی رابط کاربری
+                                                            و کدها باید لحاظ شود را در نظر بگیریم و راهکارهایی را برای آشنایی با مخاطبان
+                                                            وب سایت، فعالیت های آن ها و به طور کل، کلیه اطلاعاتی که ما از مخاطبان نیاز
+                                                            داریم را بیابیم و تمام تغییراتی که به حس خوب و مثبت مخاطبمان کمک می کند
+                                                            را اعمال کنیم و در نهایت نقش رسانه های اجتماعی که در تعامل مستقیم با مخاطبمان
+                                                            هستند را به عنوان ابزار کمکی برای اجرای اصول CRM در وب سایت بررسی کنیم.</p>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="schedule-31" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۶:۳۰ — ۱۶:۴۵</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-microphone fa-ml black-light"></i>سخنرانی: —</h6><a href="#people-atakhalighi"><b>عطا خلیقی</b></a></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="schedule-32" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۶:۴۵ — ۱۷:۱۵</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6><i class="fa fa-slideshare fa-ml black-light"></i>ارائه: پنج اشتباه کلیدی در طراحی کسب
+                                                و کار های تحت وب</h6><a href="#people-alinematishahab"><b>علی نعمتی‌شهاب</b></a>
+                                            <div
+                                            class="table-row-more">
+                                                <span class="badge-blue-light badge-medium hide-on-small">چکیده ارائه</span>
+                                                <div class="table-row-more_overlay">
+                                                    <p><b class="hide-on-small">علی نعمتی‌شهاب خواهد گفت: </b>این روزها کسب‌وکارهای تحت
+                                                        وب تبدیل به جذاب‌ترین حوزه‌ی کاری برای بسیاری از افراد متخصص و سرمایه‌گذاران
+                                                        شده‌اند. نوآوری‌های درخشان این کسب‌وکارها از یک سو و موفقیت‌های چشم‌گیر مالی
+                                                        آن‌ها از سوی دیگر در کنار رکود نسبی سایر کسب‌وکارها در اقتصاد جهانی، باعث هجوم
+                                                        افراد زیادی به حوزه‌ی استارت‌آپ‌های تحت وب شده‌ است. اما آمارها نشان‌گر این
+                                                        هستند که نرخ شکست در این حوزه نیز بسیار بالا است و از میان هزاران استارت‌آپی
+                                                        که هر ساله آغاز به کار می‌کنند، چند استارت‌آپ معدود تبدیل به شرکت‌هایی بزرگ
+                                                        می‌شوند. پژوهش‌ها حکایت از این دارند که یکی از علت‌های این مسئله، اشتباهاتی
+                                                        است که در زمان طراحی کسب‌وکارهای تحت وب صورت می‌گیرد. در این ارائه 5 اشتباه
+                                                        کلیدی که باعث شکست استارت‌آپ‌های وب می‌شوند، مورد بررسی قرار می‌گیرند.</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </section>
+                            <section id="schedule-33" class="table-row">
+                                <div class="wrap-row middle">
+                                    <div class="column--small-2 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <time class="gray"><b>۱۷:۱۵ — ۱۸:۰۰</b></time>
+                                        </div>
+                                    </div>
+                                    <div class="column--small-10 column--xsmall-12">
+                                        <div class="column--inner">
+                                            <h6 class="gray">اختتامیه / سورپرایز!</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        </article>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <!-- -- /Schedule -- -->
+            <!-- -- Ticket -- -->
+            <section id="ticket" has-been-expired="true" class="section ticket on-navigation">
+                <div class="wrap">
+                    <div class="wrap-row center">
+                        <div class="column--xsmall-12">
+                            <div class="column--inner">
+                                <header class="ticket-head">
+                                    <h3>ثبت نام در همایش</h3>
+                                    <p>برای حضور در اولین همایش آینده طراحی وب باید بلیط خود را تهیه نمایید.</p>
+                                </header>
+                            </div>
+                        </div>
+                        <div class="wrap-row center">
+                            <div class="column--medium-6">
+                                <div class="column--inner">
+                                    <section class="ticket--choice is-disabled"><i class="icon fa fa-calendar-o fa-ml fa-2x"></i><b class="bold">تا قبل از ۱۰ شهریور ۱۳۹۴</b>
+                                        <i
+                                        class="icon fa fa-money fa-ml fa-2x"></i>
+                                            <h6 class="price">۱۹۰٬۰۰۰ تومان</h6>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="column--medium-6">
+                                <div class="column--inner">
+                                    <section class="ticket--choice is-disabled"><i class="icon fa fa-calendar-o fa-ml fa-2x"></i><b class="bold">بلیط عادی</b><i class="icon fa fa-money fa-ml fa-2x"></i>
+                                        <h6
+                                        class="price">۲۵۰٬۰۰۰ تومان</h6>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-row center">
+                        <div class="column--medium-4">
+                            <div class="column--inner"><a href="register/" class="button radius button-blue scale disabled">مهلت ثبت نام به پایان رسیده است</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- -- /Ticket -- -->
+            <!-- -- Location -- -->
+            <section id="location" class="section wrap">
+                <section class="wrap-row wrap-is-border">
+                    <aside class="column--xsmall-12 column--small-3 column--medium-3 sidebar">
+                        <div class="column--inner">
+                            <section class="aside">
+                                <div class="aside--box">
+                                    <h3 class="aside--box_title typo-delta"><i class="fa fa-map-marker fa-ml"></i>محل برگزاری</h3>
+                                    <p>چهارشنبه، پنج‌شنبه ۱۵، ۱۶ مهر ماه ۱۳۹۴ در مرکز همایش های شهید قندی هم‌دیگر را ملاقات خواهیم کرد.</p>
+                                    <p><b>با ما در ارتباط باشید:</b>
+                                        <div class="center"><a href="mailto:contact@wsschool.org" target="_self"><i class="fa fa-2x fa-envelope"></i></a>
+                                            <a
+                                            href="http://instagram.com/wsschool_org"><i class="fa fa-2x fa-instagram"></i></a><a href="http://facebook.com/wsschool"><i class="fa fa-2x fa-facebook"></i></a>
+                                                <a
+                                                href="http://twitter.com/wsschool_org"><i class="fa fa-2x fa-twitter"></i></a>
+                                        </div>
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+                    </aside>
+                    <section class="column--xsmall-12 column--small-9 container">
+                        <div class="column--inner">
+                            <article class="content">
+                                <h5>اولین همایش آینده طراحی وب کجا برگزار خواهد شد؟</h5>
+                                <p> <b>نشانی:‌ </b> تهران، خیابان شریعتی، پایین تر از پل سیدخندان، وزارت ارتباطات و فن آوری اطلاعات، مرکز
+                                    همایش های شهید قندی.</p>
+                                <div id="map"></div>
+                            </article>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <!-- -- /Location -- -->
+            <!-- -- Gallery -- -->
+            <section id="gallery" class="section gallery on-navigation">
+                <div class="wrap">
+                    <div class="wrap-row center">
+                        <div class="column--xsmall-12">
+                            <div class="column--inner">
+                                <header class="gallery-head">
+                                    <h4>در همایش چه می‌گذرد؟</h4>
+                                </header>
+                            </div>
+                        </div>
+                        <div class="wrap-row gallery--photos"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- -- /Gallery -- -->
+            <!-- -- Sponsors -- -->
+            <section id="sponsors" class="section wrap">
+                <section class="wrap-row wrap-is-border">
+                    <aside class="column--xsmall-12 column--small-3 column--medium-3 sidebar">
+                        <div class="column--inner">
+                            <section class="aside">
+                                <div class="aside--box">
+                                    <h3 class="aside--box_title typo-delta"><i class="fa fa-star fa-ml"></i>حامیان</h3>
+                                    <p>این عزیزان سختی برگزاری همایش را برای ما قابل تحمل کردند.</p>
+                                </div>
+                            </section>
+                        </div>
+                    </aside>
+                    <section class="column--xsmall-12 column--small-9 container">
+                        <div class="column--inner">
+                            <article class="content">
+                                <div class="wrap-row center">
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://majidonline.com/" target="_blank">
+                                                <img src="dist/img/sponsors/majidonline.jpg" alt="مجید آنلاین" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">مجید آنلاین</b>
+                                                    <span class="sponsors--item-type black-light">حامی راهبردی</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://itc.ir/" target="_blank">
+                                                <img src="dist/img/sponsors/ict.jpg" alt="سازمان فناوری اطلاعات ایران" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">سازمان فناوری اطلاعات ایران</b>
+                                                    <span class="sponsors--item-type black-light">حامی راهبردی</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://saramad.ir/" target="_blank">
+                                                <img src="dist/img/sponsors/saramad.jpg" alt="مرکز رسانه های دیجیتال" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">مرکز رسانه های دیجیتال</b>
+                                                    <span class="sponsors--item-type black-light">حامی راهبردی</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://aparat.com/" target="_blank">
+                                                <img src="dist/img/sponsors/aparat.jpg" alt="آپارات" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">آپارات</b>
+                                                    <span class="sponsors--item-type black-light">حامی راهبردی</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://bayan.ir/" target="_blank">
+                                                <img src="dist/img/sponsors/bayan.jpg" alt="شرکت بیان" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">شرکت بیان</b>
+                                                    <span class="sponsors--item-type black-light">حامی راهبردی</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://tehran.irannsr.org/" target="_blank">
+                                                <img src="dist/img/sponsors/irannsr.jpg" alt="سازمان نظام صنفی رایانه‌ای استان تهران" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">سازمان نظام صنفی رایانه‌ای استان تهران</b>
+                                                    <span class="sponsors--item-type black-light">حامی معنوی</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://iranea.com/" target="_blank">
+                                                <img src="dist/img/sponsors/iranea.jpg" alt="کانون کارآفرینی ایران" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">کانون کارآفرینی ایران</b>
+                                                    <span class="sponsors--item-type black-light">حامی معنوی</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://ikiu.ac.ir/fa/" target="_blank">
+                                                <img src="dist/img/sponsors/ikiu.jpg" alt="دانشگاه بین المللی امام خمینی" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">دانشگاه بین المللی امام خمینی</b>
+                                                    <span class="sponsors--item-type black-light">حامی معنوی</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://peivast.com/" target="_blank">
+                                                <img src="dist/img/sponsors/peivast.jpg" alt="ماهنامه پیوست" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">ماهنامه پیوست</b>
+                                                    <span class="sponsors--item-type black-light">حامی معنوی</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://kalleh.com/" target="_blank">
+                                                <img src="dist/img/sponsors/kalleh.jpg" alt="شرکت فرآورده های لبنی کاله" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">شرکت فرآورده های لبنی کاله</b>
+                                                    <span class="sponsors--item-type black-light">حامی تجاری</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://clickyab.com/" target="_blank">
+                                                <img src="dist/img/sponsors/clickyab.jpg" alt="کلیک‌یاب" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">کلیک‌یاب</b>
+                                                    <span class="sponsors--item-type black-light">حامی تجاری</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://fastdic.com/" target="_blank">
+                                                <img src="dist/img/sponsors/fastdic.jpg" alt="فست‌دیکشنری" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">فست‌دیکشنری</b>
+                                                    <span class="sponsors--item-type black-light">حامی تجاری</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://atitel.com" target="_blank">
+                                                <img src="dist/img/sponsors/atitel.jpg" alt="آتی‌تل" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">آتی‌تل</b>
+                                                    <span class="sponsors--item-type black-light">حامی تجاری</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://taskulu.com/" target="_blank">
+                                                <img src="dist/img/sponsors/taskulu.jpg" alt="تسکولو" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">تسکولو</b>
+                                                    <span class="sponsors--item-type black-light">حامی تجاری</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                </div>
+                                <h5>رسانه‌ای</h5>
+                                <div class="wrap-row center">
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://ponisha.ir/" target="_blank">
+                                                <img src="dist/img/sponsors/ponisha.jpg" alt="پونیشا" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">پونیشا</b>
+                                                    <span class="sponsors--item-type black-light">حامی ویژه</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://techcafe.tv/" target="_blank">
+                                                <img src="dist/img/sponsors/techcafe.jpg" alt="کافه فناوری" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">کافه فناوری</b>
+                                                    <span class="sponsors--item-type black-light">حامی ویژه</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://vajehyab.com/" target="_blank">
+                                                <img src="dist/img/sponsors/vajehyab.jpg" alt="واژه یاب" class="sponsors--item-image">
+                                                <figcaption><b class="sponsors--item-title">واژه یاب</b>
+                                                    <span class="sponsors--item-type black-light">حامی ویژه</span>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                </div>
+                                <div class="wrap-row center">
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://digiato.com/" target="_blank">
+                                                <img src="dist/img/sponsors/digiato.jpg" class="sponsors--item-image is-thumb">
+                                                <figcaption><b class="sponsors--item-title">دیجیاتو</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://eranico.com/" target="_blank">
+                                                <img src="dist/img/sponsors/eranico.jpg" class="sponsors--item-image is-thumb">
+                                                <figcaption><b class="sponsors--item-title">ارانیکو</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://barsam.ir/" target="_blank">
+                                                <img src="dist/img/sponsors/barsam.jpg" class="sponsors--item-image is-thumb">
+                                                <figcaption><b class="sponsors--item-title">برسام</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://fontiran.com/" target="_blank">
+                                                <img src="dist/img/sponsors/fontiran.jpg" class="sponsors--item-image is-thumb">
+                                                <figcaption><b class="sponsors--item-title">فونت ایران</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://parscoders.com/" target="_blank">
+                                                <img src="dist/img/sponsors/parscoders.jpg" class="sponsors--item-image is-thumb">
+                                                <figcaption><b class="sponsors--item-title">پارس کدرز</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://wp-parsi.com/" target="_blank">
+                                                <img src="dist/img/sponsors/wp-parsi.jpg" class="sponsors--item-image is-thumb">
+                                                <figcaption><b class="sponsors--item-title">وردپرس‌پارسی‎</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://techera.ir/" target="_blank">
+                                                <img src="dist/img/sponsors/techera.jpg" class="sponsors--item-image is-thumb">
+                                                <figcaption><b class="sponsors--item-title">عصر تکنولوژی</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://mantaraham.ir/" target="_blank">
+                                                <img src="dist/img/sponsors/mantaraham.jpg" class="sponsors--item-image is-thumb">
+                                                <figcaption><b class="sponsors--item-title">کمپین من طراحم</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-6 column--small-3 column--medium-2">
+                                        <figure class="sponsors--item">
+                                            <a href="http://zamana.blog.ir/" target="_blank">
+                                                <img src="dist/img/sponsors/zamana.jpg" class="sponsors--item-image is-thumb">
+                                                <figcaption><b class="sponsors--item-title">زمانا</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <!-- -- /Sponsors -- -->
+            <!-- -- Organizers -- -->
+            <section id="organizers" class="section wrap">
+                <section class="wrap-row wrap-is-border">
+                    <aside class="column--xsmall-12 column--small-3 column--medium-3 sidebar">
+                        <div class="column--inner">
+                            <section class="aside">
+                                <div class="aside--box">
+                                    <h3 class="aside--box_title typo-delta"><i class="fa fa-bookmark fa-ml"></i>برگزارکنندگان</h3>
+                                    <p>چه کسانی همایش آینده وب را برگزار می‌کنند؟</p>
+                                </div>
+                            </section>
+                        </div>
+                    </aside>
+                    <section class="column--xsmall-12 column--small-9 container">
+                        <div class="column--inner">
+                            <article class="content">
+                                <div class="wrap-row center">
+                                    <section class="column--xsmall-12 column--small-3">
+                                        <figure class="organizers--item">
+                                            <a href="http://artimanstudio.com/" target="_blank">
+                                                <img src="dist/img/sponsors/artiman.jpg" class="organizers--item-image is-thumb">
+                                                <figcaption><b class="organizers--item-title">موسسه طراحان و ایده پردازان آرتیمان</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-12 column--small-3">
+                                        <figure class="organizers--item">
+                                            <a href="http://wsschool.org/" target="_blank">
+                                                <img src="dist/img/sponsors/wsschool.jpg" class="organizers--item-image is-thumb">
+                                                <figcaption><b class="organizers--item-title">مدرسه استانداردهای وب</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                    <section class="column--xsmall-12 column--small-3">
+                                        <figure class="organizers--item">
+                                            <a href="http://asiatech.ir/" target="_blank">
+                                                <img src="dist/img/sponsors/asiatech.jpg" class="organizers--item-image is-thumb">
+                                                <figcaption><b class="organizers--item-title">آسیاتک</b></figcaption>
+                                            </a>
+                                        </figure>
+                                    </section>
+                                </div>
+                                <div class="wrap-row between">
+                                    <section class="column--xsmall-12 column--small-6">
+                                        <div class="organizers--info">
+                                            <h4 class="organizers--info-title typo-zeta">تماس با دبیرخانه:</h4>
+                                            <p>
+                                                تهران، میدان فاطمی، میدان گلها، خیابان کاج جنوبی، پلاک ۴۰
+                                                <br>تلفن دبیرخانه: ۸۸۹۸۵۰۳۰-۰۲۱
+                                                <br>نمابر دبیرخانه: ۸۸۹۸۰۸۹۵-۰۲۱</p>
+                                            <h4 class="organizers--info-title typo-zeta">ایمیل دبیرخانه:</h4>
+                                            <p><a href="mailto:contact@wsschool.org">contact@wsschool.org</a></p>
+                                        </div>
+                                    </section>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <!-- -- /Organizers -- -->
+        </main>
+        <!-- -- /Main -- -->
+        <footer class="hero--footer on-navigation darken-blend">
+            <section class="wrap">
+                <section class="wrap-row center">
+                    <div class="column--xsmall-12 column--small-9">
+                        <div class="column--inner">
+                            <hr class="star">
+                            <p>&copy; کپی رایت ۱۳۹۴
+                                <br>مدرسه استانداردهای وب، تحت حمایت&nbsp;<a href="http://www.majidonline.com/" target="_blank">مجید آنلاین</a>&nbsp;فعالیت
+                                می‌کند.
+                                <br><a href="mailto:contact@wsschool.org" target="_self">تماس</a>، <a href="http://twitter.com/wsschool_org"
+                                target="_blank">توییتر</a>، <a href="http://facebook.com/wsschool" target="_blank">فیس‌بوک</a>،
+                                <a
+                                href="http://instagram.com/wsschool_org" target="_blank">اینستاگرام</a>.</p>
+                            <p>
+                                <a href="http://siamak.us/?utm_campaign=Signature&amp;utm_medium=banner&amp;utm_source=WSSCHOOL" target="_blank"
+                                title="طراحی و اجرا؛ سیامک مختاری" class="siamak">
+                                    <img src="dist/img/svgs/siamak.svg" alt="سیامک مختاری">
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </footer>
+        <!-- -- Sticker -- --><a href="#ticket" class="sticker hide-on-small"><i class="fa fa-ticket fa-ml"></i>ثبت نام در همایش</a>
+        <!-- -- /Sticker -- -->
+        <!-- -- Navigation -- -->
+        <nav class="dot-navigation">
+            <div class="dot-list"><a href="#introduction" class="dot-place is-active"><i class="dot"></i><span class="dot-label">معرفی رویداد</span></a>
+                <a
+                href="#speakers" class="dot-place"><i class="dot"></i>
+                    <span class="dot-label">سخنران‌ها</span>
+                    </a><a href="#panels" class="dot-place"><i class="dot"></i><span class="dot-label">پنل‌ها</span></a><a href="#schedule"
+                    class="dot-place"><i class="dot"></i><span class="dot-label">برنامه برگزاری</span></a>
+                    <a href="#ticket" class="dot-place"><i class="dot"></i>
+                        <span class="dot-label">ثبت‌نام</span>
+                    </a><a href="#location" class="dot-place"><i class="dot"></i><span class="dot-label">محل برگزاری</span></a><a href="#gallery"
+                    class="dot-place"><i class="dot"></i><span class="dot-label">گالری</span></a>
+                    <a href="#sponsors" class="dot-place"><i class="dot"></i>
+                        <span class="dot-label">حامیان</span>
+                    </a><a href="#organizers" class="dot-place"><i class="dot"></i><span class="dot-label">برگزارکنندگان</span></a></div>
+            <span
+            class="dot-button dot-open-menu"><i class="fa fa-bars"></i></span><a href="#ticket" class="dot-button dot-button-light"><i class="fa fa-ticket"></i></a></nav>
+        <!-- -- /Navigation -- -->
+        <script type="text/javascript">
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-45772498-3', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+        window.jQuery || document.write('<script src="dist/js/jquery-1.11.3.min.js"><\/script>')
+        </script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        <script type="text/javascript">
+        var confDate = "October 07, 2016 08:00:00"
+        </script>
+        <script type="text/javascript" src="dist/js/main.js?1444325754102"></script>
+        <!-- -- Bye FOWD -- -->
+    </body>
+</html>

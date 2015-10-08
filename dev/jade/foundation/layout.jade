@@ -1,0 +1,85 @@
+block project-info
+
+- function cacheBusted(url){ return url + '?' + Date.now(); }
+- var version     = config.version
+- var name        = config.name
+
+//
+	
+		                       _                 _
+		__      _____ ___  ___| |__   ___   ___ | |  ___  _ __ __ _
+		\ \ /\ / / __/ __|/ __| '_ \ / _ \ / _ \| | / _ \| '__/ _` |
+		 \ V  V /\__ \__ \ (__| | | | (_) | (_) | || (_) | | | (_| |
+		  \_/\_/ |___/___/\___|_| |_|\___/ \___/|_(_)___/|_|  \__ |
+		                                                      |___/
+		Siamak Mokhtari <www.siamak.us> at Web Standards School <www.wsschool.org>.
+		Copyright (C) 2015 Siamak Mokhtari <hi@siamak.work>.
+		Under Licensed MIT <siamak.mit-license.org>.
+
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+
+		block title
+			title= pagename
+		//- meta(name="author" content= "WSSCHOOL.ORG by Siamak Mokhtari (www.siamak.us)")
+		meta(name="author" content= "WSSCHOOL.ORG")
+		meta(name="keywords" content= "طراحی وب,آینده طراحی وب,مدرسه استاندارد های وب,همایش,Front-end")
+		meta(name='description' content= '​اولین همایش آینده طراحی وب، کاری از مدرسه استانداردهای وب')
+
+		meta(name="robots" content="index follow")
+		meta(name="copyright" content="2015-2016")
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name="viewport" content="initial-scale=1.0 user-scalable=no width=device-width")
+
+
+		meta(property='og:type' content='website')
+		meta(property='og:site_name' content='مدرسه استانداردهای وب')
+		meta(property='og:url' content='http://conf.wsschool.org/fowd/')
+		meta(property='og:title' content='اولین همایش آینده طراحی وب')
+		meta(property='og:description' content='​اولین همایش آینده طراحی وب با هدف معرفی تکنولوژی ها و متدهای جدید در طراحی وب و ارتقا طراحی وب امسال، در ایران برگزار می‌شود.')
+		meta(property='og:image' content='http://conf.wsschool.org/fowd/dist/img/fowd.jpg')
+			
+		meta(name='twitter:card' content='summary')
+		meta(name='twitter:url' content='http://conf.wsschool.org/fowd/')
+		meta(name='twitter:domain' content='http://conf.wsschool.org/fowd/')
+		meta(name='twitter:title' content='اولین همایش آینده طراحی وب')
+		meta(name='twitter:description' content='​اولین همایش آینده طراحی وب با هدف معرفی تکنولوژی ها و متدهای جدید در طراحی وب و ارتقا طراحی وب امسال، در ایران برگزار می‌شود.')
+		meta(name='twitter:image' content='http://conf.wsschool.org/fowd/dist/img/fowd.jpg')
+
+
+		meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+		meta(name="apple-mobile-web-app-capable" content="yes")
+
+		link(rel='icon' type='image/png' href='dist/img/favicon.png')
+
+		link(href=cacheBusted('dist/css/styles.css') rel="stylesheet" media="all")
+
+		if (config.env == 'Production')
+			// 
+				
+					 ___  ___ __  __  ___    ___ ___  _  _ _____ 
+					|   \| __|  \/  |/ _ \  | __/ _ \| \| |_   _|
+					| |) | _|| |\/| | (_) | | _| (_) | .` | | |  
+					|___/|___|_|  |_|\___/  |_| \___/|_|\_| |_|  
+					
+					This version has Iransans Demo if you need Full pack IranSans Font. READ FULL_VERSION.txt located at "dist/fonts/iransans-demo/" 
+			link(href=cacheBusted('dist/fonts/iransans-demo/iransans-demo.css') rel="stylesheet")
+
+
+
+		block header
+
+	body
+		<!-- -- Hello FOWD -- -->
+
+		block content
+
+		-if(branch != true)
+			include scripts.jade
+
+		block footer
+			
+		<!-- -- Bye FOWD -- -->
+

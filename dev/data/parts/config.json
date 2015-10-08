@@ -1,0 +1,6 @@
+	"config": {
+		"version" : "1.0.3",
+		"name"    : "FOWD",
+		"date"    : "October 07, 2016 08:00:00",
+		"env"     : "Production"
+	}

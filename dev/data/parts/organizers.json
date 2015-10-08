@@ -1,0 +1,16 @@
+	"organizers": [{
+		"slug": "artiman",
+		"name": "موسسه طراحان و ایده پردازان آرتیمان",
+		"url": "http://artimanstudio.com/"
+	},
+	{
+		"slug": "wsschool",
+		"name": "مدرسه استانداردهای وب",
+		"url": "http://wsschool.org/"
+	},
+	{
+		"slug": "asiatech",
+		"name": "آسیاتک",
+		"url": "http://asiatech.ir/"
+	}
+	]

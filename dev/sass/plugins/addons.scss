@@ -1,0 +1,194 @@
+.progress{
+	position: relative;
+	display: block;
+	margin: $base-max-space auto;
+	&--body{
+		position: relative;
+		display: block;
+		// width: 30rem;
+		margin: 0.75em auto;
+		// height: 6rem;
+		padding: 1rem 0 4rem;
+		@include gradient-horizontal-three-colors($blue-dark, $blue-accent, 30%, $blue-light);
+		border-radius: $base-radius;
+		box-shadow: bottom-shadow(2);
+		z-index: 10;
+	}
+	&-title{
+		color: $black-light;
+		user-select: none;
+	}
+	&-line{
+		position: absolute;
+		display:block;
+		top: 50%;
+		right: $base-min-space;
+		left: $base-min-space;
+		height: 8px;
+		margin: 0;
+		margin-top: -3px;
+		border: 0;
+		background: rgba(black, 0.1);
+		box-shadow: 0 1px 2px rgba(255,255,255,0.1),
+					0 1px 1px rgba(black, 0.2) inset;
+		border-radius: 1em;
+		z-index: 1;
+		.label{
+			position: absolute;
+			top: -2px;
+			color: rgba($background, 0.85);
+			font-size: .8752em;
+			user-select: none;
+			&:first-of-type{
+				right: 0;
+				transform: translateX(0.4rem);
+			}
+			// &:nth-child(2){
+			// 	right: 50%;
+			// 	transform: translateX(50%);
+			// }
+			&:last-of-type{
+				left: 0;
+				transform: translateX(-0.4rem);
+			}
+		}
+		.pin{
+			position: absolute;
+			display: block;
+			top: 50%;
+			right: 1px;
+			transform: translateY(-50%);
+			color: $background;
+			text-align: center;
+			background-color: rgba($blue-dark, .5);
+			border-radius: 100%;
+			cursor: help;
+			box-shadow: 0 0 0 2px $white-dark, bottom-shadow(3);
+			transition: all 0.7s ease;
+			&-featured{
+				width: 22px;
+				height: 22px;
+				line-height: 22px;
+				font-size: 0.8em;
+			}
+			&-normal{
+				width: 14px;
+				height: 14px;
+				line-height: 14px;
+				font-size: 0.5em;
+			}
+			.pin-normal{
+				display: block;
+				position: relative;
+				height: 8px;
+				width: 8px;
+				top: 50%;
+				right: 50%;
+				margin-top: -4px;
+				margin-right: -4px;
+				border-radius: 100%;
+				background-color: white;
+			}
+		}
+		@for $i from 0 through 16 {
+			$revolution-color: darken($blue-light, $i*3.5);
+			i.pin:nth-of-type(#{$i}) {
+				background-color: $revolution-color;
+			}
+		}
+	}
+}
+
+
+
+[data-title] {
+	position: relative;
+	white-space: nowrap;
+    &:after {
+		content: attr(data-title);
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		padding: $base-min-space/2;
+		color: $blue-accent;
+		@extend %font-is-IranSans;
+		font-size: .7rem;
+		font-style: normal;
+		background-color: $white-dark;
+		box-shadow: bottom-shadow(3);
+		border-radius: $base-radius;
+		opacity: 0;
+		transition: .25s cubic-bezier(0.905, -0.250, 0.520, 1);
+		transform: translateX(-50%) rotate(5deg);
+		pointer-events: none;
+		z-index: 2;
+    }
+
+    &:hover:after {
+		margin-bottom: 18px;
+		opacity: 1;
+		transform: translateX(-50%);
+    }
+
+    &:before {
+		content: '';
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		margin-bottom: -16px;
+		border: 10px solid transparent;
+		border-top-color: $white-dark;
+		opacity: 0;
+		transition: .25s cubic-bezier(0.905, -0.250, 0.520, 1);
+		transform: translateX(-50%) rotate(5deg);
+		pointer-events: none;
+		z-index: 3;
+    }
+
+    &:hover:before {
+		margin-bottom: -1px;
+		opacity: 1;
+		transform: translateX(-50%);
+    }
+}
+
+
+.notify{
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin: 3rem 2rem;
+	.notify-badge{
+		position: relative;
+		display: table;
+		margin: 0 auto $base-min-space;
+		padding: $base-min-space $base-min-space $base-min-space $base-min-space/2;
+		width: 12rem;
+		color: white;
+		font-size: .85em;
+		word-wrap: nowrap;
+		background-color: rgba($blue-accent, .9);
+		box-shadow: bottom-shadow(2);
+		border-radius: $base-radius;
+		cursor: pointer;
+		z-index: 1;
+		user-select: none;
+		&:before{
+			content: "\f071";
+			@extend %using--icon;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			display: block;
+			font-size: 1.5em;
+		}
+		&:hover{
+			background-color: $blue;
+		}
+		span{
+			margin-right: 2.5em;
+			display: block;
+			overflow: hidden;
+		}
+	}
+}

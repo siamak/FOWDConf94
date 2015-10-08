@@ -1,0 +1,260 @@
+.form{
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	&.form--center{
+		max-width: 32.5rem;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+.label{
+	display: block;
+	padding: 1rem 0;
+	.place{
+		display: inline-block;
+		vertical-align: middle;
+		width: 8rem;
+		color: $black-light;
+		// text-align: right;
+		cursor: pointer;
+		user-select: none;
+		@extend %font-is-IranSans;
+	}
+	&.inline{ display: inline-block; margin-left: .5rem; }
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+
+//
+//
+// Inputs:
+// =======
+//
+//
+.input{
+	position: relative;
+	display: inline-block;
+    font-family: $font-light;
+    font-weight: 200;
+	// font-size: $typo-font-size;
+	font-size: .85em;
+	line-height: 2;
+	width: calc( 100% - 8.5rem);
+	max-width: 30rem;
+	padding: 5px 10px;
+	background: #FEFEFE;
+	border: 0;
+	box-shadow: 0px 1px 2px rgba($gray-light, 0.5);
+	border-radius: $base-radius;
+	vertical-align: middle;
+	direction: rtl;
+	resize: none;
+	transition: border ease .2s, box-shadow ease-in-out .15s;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-appearance: none;
+	@include placeholder{
+		color: $gray;
+	}
+	&.has-border{
+		border: 1px solid $gray;
+	}
+	// &[dir=ltr]{
+	// 	&:focus{
+	// 		direction: ltr;
+	// 		@include placeholder{
+	// 			color: #FEFEFE;
+	// 		}
+	// 	}
+	// }
+	&[required]{
+		padding-left: 2em;
+		background-image: url(../img/svgs/star.svg?ver=#{$version});
+		background-repeat: no-repeat;
+		background-position: 1em center;
+	}
+	&.little{
+		width: 160px;
+	}
+	&.error{
+		border-color: $blue-light;
+	}
+	&:active, &:focus{
+		border-color: $blue-accent;
+		border-bottom-color: rgba($blue, .65);
+		background-color: rgba($background, .95);
+		box-shadow: 0px 1px 2px rgba($gray, 0.5);
+	}
+}
+
+
+
+//
+//
+// Buttons:
+// ========
+//
+//
+.button{
+	display: inline-block;
+	padding: 5px 12px;
+	min-height: 30px;
+	min-width: 4rem;
+	background-color: $white-dark;
+	font-size: $typo-font-size;
+	line-height: 2;
+	text-align: center;
+	color: #666;
+	@extend %font-is-IranSans;
+	border: 0;
+	vertical-align: middle;
+	box-shadow: bottom-shadow(1);
+	white-space: nowrap;
+	cursor: pointer;
+	touch-action: manipulation;
+	transition: all ease-in-out .175s;
+	user-select: none;
+	&:hover{
+		box-shadow: 0 4px 12px -6px rgba(0, 0, 0, 0.15),
+					0px 3px 8px rgba(0, 0, 0, 0.125);
+	}
+	& + .button{
+		margin-right: .5rem;
+	}
+	&.small{
+		min-width: 3rem;
+		font-size: .725rem;
+		padding: 4px 10px;
+	}
+	&.large{
+		font-size: 1rem;
+		padding: 9px 15px !important;
+	}
+	&.scale{
+		display: block;
+		padding: $base-min-space;
+		margin: $base-max-space auto 0;
+	}
+	&.radius{
+		border-radius: $base-radius;
+	}
+	&.disabled{
+		// cursor: not-allowed;
+		opacity: .85;
+		pointer-events: none;
+		user-select: none;
+	}
+	@each $name, $value in $colors {
+		&-#{$name} {
+			background-color: $value;
+			color: white;
+			&:hover, &:active, &:focus{
+				color: white;
+				background-color: lighten($value, 8);
+			}
+		}
+	}
+}
+
+
+
+.selectbox{
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMTQuMzkgMjUuMzA3TC40MDcgMTAuNzdjLS44OS0uOTI0LS4xNy0xLjY3NS43Mi0yLjYuODktLjkyNCAxLjYxLTEuNjcyIDIuNS0uNzQ3TDE2IDIwLjI4NSAyOC4zNzMgNy40MjNjLjg5LS45MjQgMS42MS0uMTc2IDIuNS43NDguODkuOTI2IDEuNjEgMS42NzcuNzIgMi42TDE3LjYxIDI1LjMwOGMtLjQ0NS40NjItMS4wMjcuNjkzLTEuNjEuNjkzLS41ODMgMC0xLjE2Ni0uMjMtMS42MS0uNjkzeiIgZmlsbD0iIzAxQkFGMiIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=);
+	background-repeat: no-repeat;
+	background-size: 14px;
+	background-position: calc(100% - 14px) center;
+	padding-right: 40px;
+}
+// .checkbox {
+//     display: none;
+// }
+
+// .checkbox + label {
+//     position: relative;
+// 	display: inline-block;
+// 	background-color: #fff;
+// 	// border: 1px solid $white-gray;
+// 	// box-shadow: 0px 1px 2px rgba($white-gray, 0.5);
+// 	border-radius: $base-radius;
+//     width: 18px;
+//     height: 18px;
+// 	cursor: pointer;
+// 	vertical-align: middle;
+// 	-webkit-tap-highlight-color: rgba(0,0,0,0);
+// 	-webkit-appearance: none;
+// }
+
+// .checkbox + label + span {
+// 	display: inline-block;
+// 	font-size: 14px;
+// 	margin-right: .5em;
+// 	// color: $white-dark;
+// 	cursor: pointer;
+// 	user-select: none;
+// }
+
+// .checkbox + label:after {
+//     content: '';
+//     position: absolute;
+//     top: 1px;
+//     left: 1px;
+//     width: 14px;
+//     height: 13px;
+// 	transform: scale(0);
+// 	transition: all .2s ease;
+// }
+
+// .checkbox:checked + label:after {
+//     content: '';
+// 	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMzEuNjgzIDcuODk2bC0zLjU2Ni0zLjU3OGMtLjQyMi0uNDI0LTEuMTA3LS40MjQtMS41MyAwTDExLjczMiAxOS4yMjVsLTYuMzE4LTYuMzRjLS40MjItLjQyNC0xLjEwNy0uNDI0LTEuNTMgMEwuMzE4IDE2LjQ2M2MtLjQyMy40MjQtLjQyMyAxLjExIDAgMS41MzRsMTAuNjUgMTAuNjg1Yy4yMS4yMTIuNDg3LjMxOC43NjQuMzE4LjI3OCAwIC41NTQtLjEwNi43NjUtLjMxOEwzMS42ODMgOS40M2MuMjAzLS4yMDMuMzE3LS40OC4zMTctLjc2NyAwLS4yODgtLjExNC0uNTYzLS4zMTctLjc2N3oiIGZpbGw9IiMwMUJCRUUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPgo8L3N2Zz4K);
+// 	background-size: 14px 13px;
+// 	transform: scale(1);
+// }
+
+.radiobox {
+    position: relative;
+    display: inline-block;
+    // color: $dark-light;
+	margin-left: 1rem;
+	padding-left: 1.5rem;
+	cursor: pointer;
+    &:before{
+    	content: '';
+        position: absolute;
+        display: block;
+        top: 7px;
+        left: 0;
+        width: 13px;
+        height: 13px;
+		// background-color: $gray;
+		border: 1px solid $gray;
+		// border: 1px solid $white-gray;
+		// box-shadow: 0px 1px 2px rgba($white-gray, 0.5);
+		border-radius: 100%;
+    }
+    &:after {
+		content: '';
+        position: absolute;
+        display: block;
+		top: 10px;
+		left: 3px;
+		width: 9px;
+		height: 9px;
+        border-radius: 100%;
+		transform: scale(0);
+		transition: all .2s ease;
+    }
+}
+
+input[type="radio"] {
+    display: none;
+    &:checked + label:after {
+        background-color: $blue;
+		transform: scale(.9);
+    }
+}

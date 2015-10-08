@@ -1,0 +1,128 @@
+/**
+	* Grid setup
+	*
+	* The grid will calculate dimensions based on these two variables
+	* $columns will inform the grid loops how many columns there should be.
+	* $gutter-width will inform the grid loops how big eac column's gutters should be.
+**/
+.wrap{
+	position: relative;
+	margin: 0 auto;
+	// padding: 0 $base-min-space;
+	width: $width-wrapper;
+	max-width: 95%;
+}
+.contain{
+	width: $width-container;
+}
+
+.wrap-row {
+	display: flex;
+	margin-left: -$gutter-width;
+	margin-right: -$gutter-width;
+	flex-direction: row;
+	flex-wrap: wrap;
+	.column--inner{
+		padding: 1rem;
+	}
+
+
+
+	// Alignment:
+	&.start {
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		text-align: start;
+	}
+	&.center {
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		text-align: center;
+	}
+	&.end {
+		-webkit-justify-content: flex-end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		text-align: end;
+	}
+
+	&.top {
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+	}
+	&.middle {
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+	&.bottom {
+		-webkit-align-items: flex-end;
+		-ms-flex-align: end;
+		align-items: flex-end;
+	}
+
+
+
+	// Distribution
+	&.around {
+		-webkit-justify-content: space-around;
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+	}
+	&.between {
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+}
+
+%col {
+	display: flex;
+	padding-left: $gutter-width;
+	padding-right: $gutter-width;
+	flex-direction: column;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+%col-flex {
+	@extend %col;
+	flex-grow: 1;
+	flex-basis: 0;
+	max-width: 100%;
+}
+
+
+@media only screen and (max-width: $tablet) {
+	.hide-on-small{ display: none !important; }
+}
+
+/**
+ * Build the grid in two steps, to help minimize file size
+ * Step 1, for each namespace, create the grid-base
+ * Step 2, for each namespace, wrap the col width/offset measurements in their breakpoint media query
+ */
+@each $val in $breakpoints {
+	$namespace: nth($val, 1);
+	@include grid-base( $namespace );
+}
+
+@each $val in $breakpoints {
+	@if length($val) == 1 {
+
+		$namespace: nth($val, 1);
+		@include grid-sizes( $namespace );
+
+	} @else {
+
+		$namespace: nth($val, 1);
+		$size: nth($val, 2);
+
+		@media only screen and (min-width: #{$size}) {
+			@include grid-sizes( $namespace );
+		}
+	}
+}

@@ -1,0 +1,152 @@
+[class^="badge"]{
+	position: relative;
+	top: -4px;
+	display: inline-block;
+	font-size: .5em;
+	font-weight: 400;
+	border-radius: $base-radius;
+	padding: 0.1em 0.35em 0.35em;
+	margin: 0 0.4rem;
+	@include gradient-vertical(rgba(white, 0), rgba(white, .1));
+	user-select: none;
+}
+
+@each $name, $value in $colors {
+	.badge-#{$name} {
+		background-color: $value;
+		color: white;
+	}
+}
+
+.badge-small{ font-size: 0.35em; }
+.badge-medium{
+	font-size: 0.7em;
+	padding: 0.2em 1em;
+}
+
+
+.table{
+	margin: $base-max-space auto;
+	&-head{
+		position: relative;
+		color: $background;
+		background-color: $blue-accent !important;
+		@extend %font-is-IranSans;
+		border-radius: 0 0 $base-radius $base-radius;
+		&_featured{
+			position: relative;
+			color: $background;
+			background-color: $blue !important;
+			border: 0 !important;
+			border-radius: $base-radius $base-radius 0 0;
+			box-shadow: bottom-shadow(1);
+		}
+	}
+	&-row{
+		border: 1px solid darken($background, 11.5);
+		border-width: 0 1px 1px;
+		padding: $base-min-space/5 0;
+		&:nth-of-type(odd){
+			background-color: darken($background, 3);
+		}
+		&:last-of-type{
+			border-radius: 0 0 $base-radius $base-radius;
+		}
+		&-more{
+			position: relative;
+			display: inline-block;
+			vertical-align: sub;
+			@media only screen and (min-width: $tablet) {
+				&_overlay{
+					position: absolute;
+					top: 100%;
+					right: 0.4rem;
+					padding: $gutter-width;
+					margin-top: -1rem;
+					font-size: .85rem;
+					width: 30rem;
+					background-color: $white-dark;
+					border: 1px solid darken($background, 17);
+					border-radius: $base-radius;
+					box-shadow: bottom-shadow(4),
+								top-shadow(1);
+					visibility: hidden;
+					// overflow: hidden;
+					transform: scale3d(.1, 0, 1);
+					transform-origin: 100% 0;
+					transition: 0.35s cubic-bezier(0.905, 0.250, 0.5, 1);
+					z-index: 11;
+					&:before, &:after {
+						content: '';
+						position: absolute;
+						bottom: 100%;
+						right: 2rem;
+						border: 8px solid transparent;
+						pointer-events: none;
+					}
+					&:before {
+						margin-bottom: 1px;
+						border-bottom-color: darken($background, 17);
+						z-index: 3;
+					}
+					&:after {
+						border-bottom-color: $white-dark;
+						z-index: 3;
+					}
+					&.is-run{
+						visibility: visible;
+						transform: scale3d(1, 1, 1);
+						margin-top: 0.75rem;
+					}
+					p{
+						position: relative;
+						// overflow-y: auto;
+						// max-height: 20rem;
+						font-size: 1em;
+						word-spacing: -0.025em;
+						margin-bottom: 0;
+						z-index: 1;
+					}
+				}
+			}
+			@media only screen and (max-width: $tablet) {
+				p{margin: 1rem auto;}
+			}
+		}
+		[class^="badge"]{
+			box-shadow: top-shadow(1);
+			cursor: pointer;
+			z-index: 2;
+		}
+		.gray{
+			color: darken($gray, 25);
+		}
+		h6{
+			margin: 0.5em auto;
+			font-size: 1.025rem;
+		}
+	}
+}
+
+
+.ripple {
+	position: absolute;
+	height: 10rem;
+	width: 10rem;
+	margin-top: -5rem;
+	background-color: rgba(0, 0, 0, .65);
+	border-radius: 100%;
+	transform: scale(0);
+	z-index: 1;
+}
+
+.animate {
+	animation: ripple .85s ease-in-out;
+}
+
+@keyframes ripple {
+	100% {
+		transform: scale(4.5);
+		background-color: transparent;
+	}
+}

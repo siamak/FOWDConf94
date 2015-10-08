@@ -1,0 +1,57 @@
+extends foundation/layout.jade
+
+block project-info
+	- var pagename = 'اولین همایش آینده طراحی وب'
+	- var branch   = true
+
+block content
+	.wrap
+		.wrap-row
+			.column--small-12
+				.column--inner
+					form.form
+						label.label
+							span.place نام و نام خانوادگی
+							input.input.has-border(type="text", placeholder="نام خود را وارد نمایید...", required="true")
+
+						label.label
+							span.place ایمیل
+							input.input.has-border(type="email", placeholder="ایمیل خود را وارد نمایید..." dir="ltr", required="true")
+
+						label.label
+							span.place شماره تلفن
+							input.input.has-border.error(type="phone", placeholder="شماره تلفن را وارد نمایید...", required="true")
+
+						label.label
+							span.place توضیحات
+							textarea.input.has-border(rows="8")
+								| لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+
+						label.label.inline
+							span.place گزینه انتخابی
+							select.input.selectbox.has-border(name="name")
+								option(value="0" selected) انتخاب...
+								option(value="1") گزینه ۱
+								option(value="2") گزینه ۲
+								option(value="3") گزینه ۳
+								option(value="4") گزینه ۴
+
+						.label
+							input(id="radio-input-1" type="radio" value="myValue 1" name="radio-group" checked)
+							label(for="radio-input-1" class="radiobox") مقدار ۱
+
+							input(id="radio-input-2" type="radio" value="myValue 2" name="radio-group")
+							label(for="radio-input-2" class="radiobox") مقدار ۲
+
+						label.label
+							span.place دکمه ها
+							button.button.radius.button-blue-light کلیک کن!
+							button.button.radius.button-blue کلیک کن!
+							button.button.radius.button-blue-accent کلیک کن!
+							button.button.radius.button-blue-dark کلیک کن!
+							button.button.radius.button-blue.large کلیک کن!
+							button.button.radius.button-blue-light.small کلیک کن!
+
+					hr.fancy(data-content="خط های جداکننده")
+					hr.star
+					hr

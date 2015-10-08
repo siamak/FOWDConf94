@@ -1,0 +1,121 @@
+extends foundation/layout.jade
+
+block project-info
+	- var pagename = 'اولین همایش آینده طراحی وب'
+	- var branch   = true
+
+block content
+	header.hero--header.wide
+		section.wrap.hero--header-wrap
+			section.hero--header-container
+				.wrap-row.center.wrap-static
+					section.column--xsmall-12.column--small-6
+						.column--inner
+							img.favicon--logo(src="dist/img/svgs/TheFutureOfWebDesign_logo-favicon.svg", alt="اولین همایش آینده طراحی وب")
+							h2.typo-delta ثبت نام در اولین همایش آینده وب
+							p مشخصات خود را دقیق وارد کنید و از طریق درگاه پرداخت بانک مبلغ را واریز کنید.	
+
+
+
+	section.section.ticket--from
+		section.wrap.contain
+			.wrap-row.center
+				section.column--xsmall-12.column--small-6
+					section.ticket--choice.blue-ticket.ticket-single
+						p
+							b تیکت موجود:
+						i.icon.fa.fa-calendar-o.fa-ml.fa-2x
+						b.bold تا ۳۱ مرداد ۱۳۹۴
+						i.icon.fa.fa-money.fa-ml.fa-2x
+						h6.price ۹۰٫۰۰۰ تومان
+						form.form.form--center
+							p تعداد تیکت های خود را وارد کنید:
+							input.input.little.has-border(type="number" min="1" max="5" placeholder="تعداد تیکت را وارد کنید...")
+							button.button.radius.button-blue-light.small
+								| مرحله بعد
+								i.fa.fa-chevron-left.fa-mr
+			
+			.wrap-row.between
+				section.column--xsmall-12.column--small-8
+					-for(i=1; i<5; i++)
+						section.column--inner.ticket-step
+							h5.ticket-step-title تیکت شماره #{i}:
+							form.form
+								label.label
+									span.place نام و نام خانوادگی
+									input.input.has-border(type="text", placeholder="نام خود را وارد کنید...", required="true")
+
+								label.label
+									span.place ایمیل
+									input.input.has-border(type="email", placeholder="ایمیل خود را وارد کنید..." dir="ltr", required="true")
+
+								label.label
+									span.place شماره تلفن همراه
+									input.input.has-border(type="phone", placeholder="شماره تلفن را وارد کنید...", required="true")
+
+								label.label 
+									span.place تخصص
+									select.input.selectbox.has-border(name="name")
+										option(value="0" selected) انتخاب...
+										option(value="1") گزینه ۱
+										option(value="2") گزینه ۲
+										option(value="3") گزینه ۳
+										option(value="4") گزینه ۴
+								
+								label.label
+									span.place تخفیف
+									input.input.has-border.little(type="phone", placeholder="کد تخفیف خود را وارد کنید...")
+
+								.label
+									span.place
+									button.button.radius.button-blue-accent ثبت
+
+				section.column--xsmall-12.column--small-4
+					section.column--inner.ticket-receipt
+						header.ticket-receipt--head
+							.border--bottom-solid
+								b.pull-right.title پرداخت شما:
+								span.pull-left.date.gray.small دوشنبه ۱۲ مرداد ۱۳۹۴
+						
+						section.ticket-receipt--body
+							p.typo-zeta میهمان گرامی:
+							ul.ticket-receipt--list
+								-for(i=1; i<5; i++)
+									li.border--bottom-dashed
+										b.pull-right.key.black-light تیکت زود هنگام (#{i})
+										div.pull-left.value
+											b ۹۰٫۰۰۰ 
+											span.gray.small تومان
+						
+						section.ticket-receipt--foot
+							ul.ticket-receipt--list
+								li.border--bottom-solid
+									b.pull-right.key.black-light درصد تخفیف:
+									div.pull-left.value
+										b ۴۵
+										span.gray.small درصد
+								li
+									b.pull-right.key.black-light مبلغ کل:
+									div.pull-left.value
+										b ۹۰,۰۰۰
+										span.gray.small تومان
+								li
+									b.pull-right.key.black-light تخفیف:
+									div.pull-left.value.blue-light
+										b(dir="ltr") – ۴۵,۰۰۰
+								li
+									b.pull-right.key.black.huge مبلغ پرداختی:
+									div.pull-left.value.blue-accent.huge
+										b ۴۵,۰۰۰ تومان
+
+							a.ticket-receipt--buy.button.button-blue-accent.radius(href="#") خرید
+	
+	include foundation/footer.jade
+
+
+
+	section.notify
+		.notify-badge
+			span ایمیل خود را وارد نمایید!
+		.notify-badge
+			span شماره موبایل شما صحیح نیست.

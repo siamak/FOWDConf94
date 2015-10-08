@@ -1,0 +1,771 @@
+extends foundation/layout.jade
+
+block project-info
+	- var pagename = 'اولین همایش آینده طراحی وب'
+
+block content
+
+	include foundation/header.jade
+
+	<!-- -- Main -- -->
+	main.hero--main
+		<!-- -- Introduction -- -->
+		section.section.wrap(id="introduction")
+			section.wrap-row.wrap-is-border
+				aside.column--xsmall-12.column--small-3.column--medium-3.sidebar
+
+					.column--inner
+						section.aside
+							.aside--box
+								h3.aside--box_title.typo-delta
+									i.fa.fa-info.fa-ml
+									| معرفی رویداد
+								p
+									b اولین همایش آیندها وب؛
+									|  چهارشنبه، پنج‌شنبه ۱۵، ۱۶ مهر ماه ۱۳۹۴.
+
+				section.column--xsmall-12.column--small-9.container
+					.column--inner
+						article.content
+							.wrap-row.top
+
+								section.column--xsmall-12.column--small-6
+									h2.typo-delta اولین همایش آینده طراحی وب
+									p 
+										| همایش آینده طراحی وب (Future of Web Design) یک رویداد دو روزه برای طراحان و توسعه‌دهندگان Front–End است که می‌خواهند اثری متفاوت در وب فارسی ایجاد کنند و از تجربیات و تخصص کسانی که دستی به آتش دارند استفاده کنند. در این رویداد علاوه بر مباحث و ارائه‌های فنی و تخصصی در حوزه وب و آینده طراحی وب، مسایل مربوط به راه‌اندازی کسب‌وکارهای نوپا در حوزه وب نیز مطرح و صاحبین کسب‌وکارهای موفق در این حوزه سخنرانی خواهند داشت.
+										br
+										| این رویداد علاوه بر اینکه بصورت حضوری برگزار می‌گردد، بصورت زنده و آنلاین نیز پوشش داده خواهد شد تا علاقمندان خارج از کشور و کسانی که امکان حضور ندارند بتوانند بصورت آنلاین در این رویداد شرکت کنند.
+									h3.typo-zeta مزایای شرکت در این همایش
+									ul
+										li آشنایی با جدیدترین متدهای طراحی وب
+										li استفاده از تجربیات افراد موفق در این حوزه
+										li شبکه‌سازی و برقرای ارتباط با سایر اهالی وب
+										li دریافت گواهی شرکت در همایش
+										li دو روز خوش همراه با یادگیری و شبکه‌سازی
+
+
+								section.column--xsmall-12.column--small-6
+									picture.hero--cover
+										img(src="dist/img/fowd-iran.jpg" srcset="dist/img/fowd-iran@2x.jpg 2x" alt="#{pagename}")
+		
+		<!-- -- /Introduction -- -->
+
+
+
+		<!-- -- Hashtag -- -->
+		section.hashtag.on-navigation
+			.wrap
+				.wrap-row.center
+					.column--xsmall-12
+						header.hashtag-head
+							h5 
+								| از هش‌تگ 
+								a(href="https://twitter.com/intent/tweet?hashtags=FOWDConf94&via=wsschool_org" target="_blank" dir="ltr") 
+									i.fa.fa-twitter
+									| FOWDConf94
+								|  در شبکه‌های اجتماعی استفاده کنید
+
+				.wrap-row.center
+					a.button.radius.button-blue-accent(href="http://telegram.me/wsschool" target="_blank") به کانال تلگرام مدرسه استانداردهای وب بپیوندید
+		
+		<!-- -- /Hashtag -- -->
+
+		
+		<!-- -- Speakers -- -->
+		section.section.wrap(id="speakers")
+
+			section.wrap-row.wrap-is-border
+				aside.column--xsmall-12.column--small-3.column--medium-3.sidebar
+
+					.column--inner
+						section.aside
+							.aside--box
+								h3.aside--box_title.typo-delta
+									i.fa.fa-microphone.fa-ml
+									| سخنران‌ها
+								p در اولین همایش آینده طراحی وب چه کسانی در کنار شما حضور خواهند داشت؟
+
+				section.column--xsmall-12.column--small-9.container
+					.column--inner
+						article.content
+							h3.typo-delta ارائه دهندگان
+							.wrap-row.center
+								-for(i=0; i<people.length; i++)
+									-if(people[i].just_panel != true && people[i].is_speaker != true)
+										section.column--xsmall-6.column--small-4.column--medium-3
+											figure.people(id="people-#{people[i].slug}")
+												img.people-image(src="dist/img/people/avatar-#{people[i].slug}.jpg" alt="#{people[i].name}")
+												figcaption.people--overlay
+													h2.people--overlay-title.typo-epsilon
+														-if(people[i].is_skype == true)
+															span.tiny(data-title="از طریق اسکایپ")
+																i.fa.fa-skype.icon-remote
+														=people[i].name
+													b.people--overlay-position #{people[i].position}
+													//- -if(people[i].is_none != true)
+													//- 	span.people--overlay-subject 
+													//- 		-if(people[i].is_speaker == true)
+													//- 			| سخنران 
+													//- 		-else
+													//- 			| ارائه‌دهنده
+
+							h3.typo-delta سخنرانان
+							.wrap-row.center
+								-for(i=0; i<people.length; i++)
+									-if(people[i].just_panel != true && people[i].is_speaker == true)
+										section.column--xsmall-6.column--small-4.column--medium-3
+											figure.people(id="people-#{people[i].slug}")
+												img.people-image(src="dist/img/people/avatar-#{people[i].slug}.jpg" alt="#{people[i].name}")
+												figcaption.people--overlay
+													h2.people--overlay-title.typo-epsilon
+														-if(people[i].is_skype == true)
+															span.tiny(data-title="از طریق اسکایپ")
+																i.fa.fa-skype.icon-remote
+														=people[i].name
+													b.people--overlay-position #{people[i].position}
+													//- -if(people[i].is_none != true)
+													//- 	span.people--overlay-subject 
+													//- 		-if(people[i].is_speaker == true)
+													//- 			| سخنران 
+													//- 		-else
+													//- 			| ارائه‌دهنده
+
+
+							.wrap-row
+								section.column--xsmall-12
+									figure.nested
+										img.nested-image(src="dist/img/people/avatar-mahdisorouri.jpg" alt="مهدی سروری")
+										figcaption.nested--content
+											h4.nested--content-title.typo-zeta مجری برنامه: 
+											p 
+												| مهدی سروری؛ 
+												//- br
+												small ژورنالسیت و مجری همایش
+		<!-- -- /Speakers -- -->
+
+		<!-- -- Panels -- -->
+		section.section.wrap(id="panels")
+
+			section.wrap-row.wrap-is-border
+				aside.column--xsmall-12.column--small-3.column--medium-3.sidebar
+
+					.column--inner
+						section.aside
+							.aside--box
+								h3.aside--box_title.typo-delta
+									i.fa.fa-puzzle-piece.fa-ml
+									| پنل‌ها
+								p موضوعاتی که به صورتی گروهی در مورد آن‌ها بحث خواهد شد.
+
+				section.column--xsmall-12.column--small-9.container
+					.column--inner
+						article.content
+							.wrap-row.center
+								section.column--xsmall-12.column--small-6
+									section.gray--box(id="panel-box-1")
+										.column--inner
+											h6.gray--box-title پنل روز اول: هر وﺏ‌سایت یک رسانه
+											.wrap-row.center
+			
+												-for(i=0; i<people.length; i++)
+													-if(people[i].panel == 1)
+														section.column--xsmall-6.column--small-12.column--medium-4
+															figure.people(id="people-#{people[i].slug}")
+																img.people-image.is-small(src="dist/img/people/avatar-#{people[i].slug}.jpg" alt="#{people[i].name}")
+																figcaption.people--overlay
+																	b.people--overlay-title #{people[i].name}
+								
+								section.column--xsmall-12.column--small-6
+									section.gray--box(id="panel-box-2")
+										.column--inner
+											h6.gray--box-title پنل روز دوم: چالش نیرﻭﯼ انسانی
+											.wrap-row.center
+
+												-for(i=0; i<people.length; i++)
+													-if(people[i].panel == 2)
+														section.column--xsmall-6.column--small-12.column--medium-4
+															figure.people(id="people-#{people[i].slug}")
+																img.people-image.is-small(src="dist/img/people/avatar-#{people[i].slug}.jpg" alt="#{people[i].name}")
+																figcaption.people--overlay
+																	b.people--overlay-title #{people[i].name}
+							
+							.wrap-row
+								section.column--xsmall-12
+									figure.nested
+										img.nested-image(src="dist/img/people/avatar-arashbarahmand.jpg" alt="آرش برهمند")
+										figcaption.nested--content
+											h4.nested--content-title.typo-zeta گرداننده پنل: 
+											p آرش برهمند
+
+		<!-- -- /Panels -- -->
+
+
+
+		<!-- -- Schedule -- -->
+		section.section.wrap(id="schedule")
+
+
+			section.wrap-row.wrap-is-border
+				aside.column--xsmall-12.column--small-3.column--medium-3.sidebar
+
+					.column--inner
+						section.aside
+							.aside--box
+								h3.aside--box_title.typo-delta
+									i.fa.fa-calendar.fa-ml
+									| برنامه برگزاری
+								p در همایش آینده طراحی وب چه خواهد گذشت؟
+
+				section.column--xsmall-12.column--small-9.container
+					.column--inner
+						article.content
+							h4
+								| کنداکتور رویداد
+								span.badge-blue-accent.badge-small کامل خواهد شد
+
+							section.progress.hide-on-small
+								b.progress-title 
+									| روز اول (
+									i.fa.fa-sun-o
+									| ) بر روی نمودار:
+								.progress--body
+									figure.progress-line
+										span.label ۰۸:۰۰
+										span.label ۱۷:۰۰
+										-for(i=0; i<schedule.length; i++)
+											-if(schedule[i].day == 1)
+												- var len = schedule.length
+												- var j = i + 1
+												- var left = (j - 1) * 7.1
+												a.pin(class=(schedule[i].type === 'normal' || schedule[i].type === 'break' || schedule[i].type === 'lunch') ? "pin-normal" : "pin-featured" data-title="#{schedule[i].date}؛ #{schedule[i].title}" style="right: #{left}%" href="#schedule-#{schedule[i].id}")
+													case schedule[i].type
+														when 'normal'
+															i.pin-normal
+														when 'presentation'
+															i.fa.fa-slideshare
+														when 'speech'
+															i.fa.fa-microphone
+														when 'panel'
+															i.fa.fa-puzzle-piece
+														when 'break'
+															i.fa.fa-coffee
+														when 'speak'
+															i.fa.fa-star
+														when 'lunch'
+															i.fa.fa-cutlery
+							//- section.table
+								header.table-row.table-head_featured
+									.wrap-row
+										.column--xsmall-12
+											.column--inner
+												i.fa.fa-sun-o.fa-ml
+												| چهارشنبه ۱۵ مهر ماه ۱۳۹۴؛  روز اول:
+
+								// header.table-row.table-head
+									.wrap-row.center
+										.column--small-2.column--xsmall-12
+											.column--inner مشخصات
+										.column--small-10.column--xsmall-12
+											.column--inner رویداد
+
+								-for(i=0; i<schedule.length; i++)
+									section.table-row
+										.wrap-row.top
+											.column--small-2.column--xsmall-12
+												.column--inner
+													time.gray
+														b #{schedule[i].date}
+													-if(schedule[i].author)
+														p
+															a(href="#people-#{schedule[i].author.slug}")
+																b #{schedule[i].author.name}
+											.column--small-10.column--xsmall-12
+												.column--inner
+													p
+														b #{schedule[i].title}
+
+														-if(schedule[i].desc)
+															| —
+															| #{schedule[i].desc}
+
+							section.table
+								header.table-row.table-head_featured
+									.wrap-row
+										.column--xsmall-12
+											//- .column--inner
+												i.fa.fa-sun-o.fa-ml
+												| پنج‌شنبه ۱۶ مهر ماه ۱۳۹۴؛  روز دوم:
+											.column--inner
+												i.fa.fa-sun-o.fa-ml
+												| چهارشنبه ۱۵ مهر ماه ۱۳۹۴ — روز اول:
+
+								// header.table-row.table-head
+									.wrap-row.center
+										.column--small-2.column--xsmall-12
+											.column--inner مشخصات
+										.column--small-10.column--xsmall-12
+											.column--inner رویداد
+
+								-for(i=0; i<schedule.length; i++)
+									-if(schedule[i].day == 1)
+										section.table-row(id="schedule-#{schedule[i].id}")
+											.wrap-row.middle
+												.column--small-2.column--xsmall-12
+													.column--inner
+														time.gray
+															b #{schedule[i].date}
+
+												.column--small-10.column--xsmall-12
+													.column--inner
+														h6(class=(schedule[i].type === 'normal') ? "gray" : "")
+															-if(schedule[i].type === 'speech')
+																i.fa.fa-microphone.fa-ml.black-light
+																| سخنرانی: 
+															-if(schedule[i].type === 'presentation')
+																i.fa.fa-slideshare.fa-ml.black-light
+																| ارائه: 
+															-if(schedule[i].type === 'panel')
+																i.fa.fa-puzzle-piece.fa-ml.black-light
+															-if(schedule[i].type === 'break')
+																i.fa.fa-coffee.fa-ml.black-light
+															-if(schedule[i].type === 'speak')
+																i.fa.fa-star.fa-ml.black-light
+															-if(schedule[i].type === 'lunch')
+																i.fa.fa-cutlery.fa-ml.black-light
+															| #{schedule[i].title}
+	
+														-if(schedule[i].author)
+															a(href="#people-#{schedule[i].author.slug}")
+																b= schedule[i].author.name
+
+														-if(schedule[i].desc)
+															.table-row-more
+																span.badge-blue-light.badge-medium.hide-on-small چکیده ارائه
+																.table-row-more_overlay
+																	p
+																		b.hide-on-small #{schedule[i].author.name} خواهد گفت: 
+																		| #{schedule[i].desc}
+														
+														-if(schedule[i].type === 'panel')
+															- var count = 0
+															-for(j=0; j<people.length; j++)
+																-if(people[j].panel == schedule[i].id_panel)
+																	- var count = count + 1
+																	- var comma = (count < 5) ? '، ' : ''
+																	a(href="#people-#{people[j].slug}")
+																		b #{people[j].name}
+																	span #{comma}
+																//- a.people(href="#people-#{schedule[i].author.slug}")
+																	img.people-image.is-thumb(src="dist/img/people/avatar-#{schedule[i].author.slug}.jpg")
+																	b #{schedule[i].author.name}
+							
+
+
+							hr.fancy(data-content="اتمام روز اول. آغاز روز دوم:")
+							
+
+							section.progress.hide-on-small
+								b.progress-title 
+									| روز دوم (
+									i.fa.fa-sun-o
+									| ) بر روی نمودار:
+								.progress--body
+									figure.progress-line
+										span.label ۰۸:۰۰
+										span.label ۱۷:۰۰
+										
+										-for(i=15; i<schedule.length; i++)
+											-if(schedule[i].day == 2)
+												- var len = schedule.length
+												- var j = (i + 1) - 15
+												- var left = (j - 1) * 6.15
+												a.pin(class=(schedule[i].type === 'normal' || schedule[i].type === 'break' || schedule[i].type === 'lunch') ? "pin-normal" : "pin-featured" data-title="#{schedule[i].date}؛ #{schedule[i].title}" style="right: #{left}%" href="#schedule-#{schedule[i].id}")
+													case schedule[i].type
+														when 'normal'
+															i.pin-normal
+														when 'presentation'
+															i.fa.fa-slideshare
+														when 'speech'
+															i.fa.fa-microphone
+														when 'panel'
+															i.fa.fa-puzzle-piece
+														when 'break'
+															i.fa.fa-coffee
+														when 'speak'
+															i.fa.fa-star
+														when 'lunch'
+															i.fa.fa-cutlery
+
+							section.table
+								header.table-row.table-head_featured
+									.wrap-row
+										.column--xsmall-12
+											//- .column--inner
+												i.fa.fa-sun-o.fa-ml
+												| پنج‌شنبه ۱۶ مهر ماه ۱۳۹۴؛  روز دوم:
+											.column--inner
+												i.fa.fa-sun-o.fa-ml
+												| پنج‌شنبه ۱۶ مهر ماه ۱۳۹۴ — روز دوم:
+												
+								// header.table-row.table-head
+									.wrap-row.center
+										.column--small-2.column--xsmall-12
+											.column--inner مشخصات
+										.column--small-10.column--xsmall-12
+											.column--inner رویداد
+
+								-for(i=0; i<schedule.length; i++)
+									-if(schedule[i].day == 2)
+										section.table-row(id="schedule-#{schedule[i].id}")
+											.wrap-row.middle
+												.column--small-2.column--xsmall-12
+													.column--inner
+														time.gray
+															b #{schedule[i].date}
+
+												.column--small-10.column--xsmall-12
+													.column--inner
+														h6(class=(schedule[i].type === 'normal') ? "gray" : "")
+															-if(schedule[i].type === 'speech')
+																i.fa.fa-microphone.fa-ml.black-light
+																| سخنرانی: 
+															-if(schedule[i].type === 'presentation')
+																i.fa.fa-slideshare.fa-ml.black-light
+																| ارائه: 
+															-if(schedule[i].type === 'panel')
+																i.fa.fa-puzzle-piece.fa-ml.black-light
+															-if(schedule[i].type === 'break')
+																i.fa.fa-coffee.fa-ml.black-light
+															-if(schedule[i].type === 'speak')
+																i.fa.fa-star.fa-ml.black-light
+															-if(schedule[i].type === 'lunch')
+																i.fa.fa-cutlery.fa-ml.black-light
+															| #{schedule[i].title}
+
+														-if(schedule[i].author)
+															a(href="#people-#{schedule[i].author.slug}")
+																b= schedule[i].author.name
+
+														-if(schedule[i].desc)
+															.table-row-more
+																span.badge-blue-light.badge-medium.hide-on-small چکیده ارائه
+																.table-row-more_overlay
+																	p
+																		b.hide-on-small #{schedule[i].author.name} خواهد گفت: 
+																		| #{schedule[i].desc}
+
+														-if(schedule[i].type === 'panel')
+															- var count = 0
+															-for(j=0; j<people.length; j++)
+																-if(people[j].panel == schedule[i].id_panel)
+																	- var count = count + 1
+																	- var comma = (count < 5) ? '، ' : ''
+																	a(href="#people-#{people[j].slug}")
+																		b #{people[j].name}
+																	span #{comma}
+								
+																//- a.people(href="#people-#{schedule[i].author.slug}")
+																	img.people-image.is-thumb(src="dist/img/people/avatar-#{schedule[i].author.slug}.jpg")
+																	b #{schedule[i].author.name}
+
+		<!-- -- /Schedule -- -->
+
+
+
+		<!-- -- Ticket -- -->
+		section.section.ticket.on-navigation(id="ticket" has-been-expired="true")
+			.wrap
+				.wrap-row.center
+					.column--xsmall-12
+						.column--inner
+							header.ticket-head
+								h3 ثبت نام در همایش
+								p برای حضور در اولین همایش آینده طراحی وب باید بلیط خود را تهیه نمایید.
+
+					.wrap-row.center
+						.column--medium-6
+							.column--inner
+								section.ticket--choice.is-disabled
+									i.icon.fa.fa-calendar-o.fa-ml.fa-2x
+									b.bold تا قبل از ۱۰ شهریور ۱۳۹۴
+									i.icon.fa.fa-money.fa-ml.fa-2x
+									h6.price ۱۹۰٬۰۰۰ تومان
+						
+						.column--medium-6
+							.column--inner
+								section.ticket--choice.is-disabled
+									i.icon.fa.fa-calendar-o.fa-ml.fa-2x
+									b.bold بلیط عادی
+									i.icon.fa.fa-money.fa-ml.fa-2x
+									h6.price ۲۵۰٬۰۰۰ تومان
+				
+				.wrap-row.center
+					.column--medium-4
+						.column--inner
+							a.button.radius.button-blue.scale.disabled(href="register/") مهلت ثبت نام به پایان رسیده است
+
+
+		<!-- -- /Ticket -- -->
+
+
+
+		<!-- -- Location -- -->
+		section.section.wrap(id="location")
+			section.wrap-row.wrap-is-border
+				aside.column--xsmall-12.column--small-3.column--medium-3.sidebar
+
+					.column--inner
+						section.aside
+							.aside--box
+								h3.aside--box_title.typo-delta
+									i.fa.fa-map-marker.fa-ml
+									| محل برگزاری
+								p چهارشنبه، پنج‌شنبه ۱۵، ۱۶ مهر ماه ۱۳۹۴ در مرکز همایش های شهید قندی هم‌دیگر را ملاقات خواهیم کرد.
+								p
+									b با ما در ارتباط باشید:
+									.center
+										a(href="mailto:contact@wsschool.org" target="_self")
+											i.fa.fa-2x.fa-envelope
+										a(href="http://instagram.com/wsschool_org")
+											i.fa.fa-2x.fa-instagram
+										a(href="http://facebook.com/wsschool")
+											i.fa.fa-2x.fa-facebook
+										a(href="http://twitter.com/wsschool_org")
+											i.fa.fa-2x.fa-twitter
+
+				section.column--xsmall-12.column--small-9.container
+					.column--inner
+						article.content
+							h5
+								| اولین همایش آینده طراحی وب کجا برگزار خواهد شد؟
+								//- span.badge-blue-light بزودی!
+							p 
+								b نشانی:‌ 
+								|  تهران، خیابان شریعتی، پایین تر از پل سیدخندان، وزارت ارتباطات و فن آوری اطلاعات، مرکز همایش های شهید قندی.
+
+							#map
+
+		<!-- -- /Location -- -->
+
+
+
+		<!-- -- Gallery -- -->
+		section.section.gallery.on-navigation(id="gallery")
+			.wrap
+				.wrap-row.center
+					.column--xsmall-12
+						.column--inner
+							header.gallery-head
+								h4 در همایش چه می‌گذرد؟
+								//- p
+									| آخرین تصاویر انتخاب شده با هش‌تگ
+									span.gray(lang="en") FOWDConf94
+									|  در اینستاگرام را نمایش می‌دهیم.
+
+					.wrap-row.gallery--photos
+						//- -for(i=0; i<12; i++)
+							.column--xsmall-6.column--small-4.column--medium-2
+								figure.gallery--photos-item
+									img(src="http://lorempixel.com/320/320/abstract/#{i}", alt="")
+									figcaption.gallery--photos-item_like
+										.step
+											b ۳۲۰
+											i.fa.fa-heart.fa-mr
+
+		<!-- -- /Gallery -- -->
+
+
+
+		<!-- -- Sponsors -- -->
+		section.section.wrap(id="sponsors")
+			section.wrap-row.wrap-is-border
+				aside.column--xsmall-12.column--small-3.column--medium-3.sidebar
+
+					.column--inner
+						section.aside
+							.aside--box
+								h3.aside--box_title.typo-delta
+									i.fa.fa-star.fa-ml
+									| حامیان
+								p این عزیزان سختی برگزاری همایش را برای ما قابل تحمل کردند.
+
+
+				section.column--xsmall-12.column--small-9.container
+					.column--inner
+						article.content
+
+							.wrap-row.center
+								-for(i=0; i<sponsors.length; i++)
+									-if(sponsors[i].cat == 1 || sponsors[i].cat == 2)
+										section.column--xsmall-6.column--small-3.column--medium-2
+											figure.sponsors--item
+												a(href="#{sponsors[i].url}" target="_blank")
+													img.sponsors--item-image(src="dist/img/sponsors/#{sponsors[i].slug}.jpg" alt="#{sponsors[i].name}")
+													figcaption
+														b.sponsors--item-title #{sponsors[i].name}
+														-if(sponsors[i].cat == 1 && sponsors[i].is_pioneer == false)
+															span.sponsors--item-type.black-light حامی راهبردی
+
+														-if(sponsors[i].cat == 1 && sponsors[i].is_pioneer == null)
+															span.sponsors--item-type.black-light حامی معنوی
+
+														-if(sponsors[i].cat == 2 && sponsors[i].is_pioneer == null)
+															span.sponsors--item-type.black-light حامی تجاری
+
+
+							h5 رسانه‌ای
+							.wrap-row.center
+
+								-for(i=0; i<sponsors.length; i++)
+									-if(sponsors[i].cat == 3)
+										-if(sponsors[i].is_featured != false)
+											section.column--xsmall-6.column--small-3.column--medium-2
+												figure.sponsors--item
+													a(href="#{sponsors[i].url}" target="_blank")
+														img.sponsors--item-image(src="dist/img/sponsors/#{sponsors[i].slug}.jpg" alt="#{sponsors[i].name}")
+														figcaption
+															b.sponsors--item-title #{sponsors[i].name}
+															span.sponsors--item-type.black-light حامی ویژه
+							
+							.wrap-row.center
+
+								-for(i=0; i<sponsors.length; i++)
+									-if(sponsors[i].cat == 3)
+										-if(sponsors[i].is_featured == false)
+											section.column--xsmall-6.column--small-3.column--medium-2
+												figure.sponsors--item
+													a(href="#{sponsors[i].url}" target="_blank")
+														img.sponsors--item-image.is-thumb( src="dist/img/sponsors/#{sponsors[i].slug}.jpg")
+														figcaption
+															b.sponsors--item-title #{sponsors[i].name}
+															//- span.sponsors--item-type.black-light حامی افتخاری
+
+		<!-- -- /Sponsors -- -->
+
+
+
+		<!-- -- Organizers -- -->
+		section.section.wrap(id="organizers")
+			section.wrap-row.wrap-is-border
+				aside.column--xsmall-12.column--small-3.column--medium-3.sidebar
+
+					.column--inner
+						section.aside
+							.aside--box
+								h3.aside--box_title.typo-delta
+									i.fa.fa-bookmark.fa-ml
+									| برگزارکنندگان
+								p چه کسانی همایش آینده وب را برگزار می‌کنند؟
+
+				section.column--xsmall-12.column--small-9.container
+					.column--inner
+						article.content
+							
+							.wrap-row.center
+								-for(i=0; i<organizers.length; i++)
+									section.column--xsmall-12.column--small-3
+										figure.organizers--item
+											a(href="#{organizers[i].url}" target="_blank")
+												img.organizers--item-image.is-thumb( src="dist/img/sponsors/#{organizers[i].slug}.jpg")
+												figcaption
+													b.organizers--item-title #{organizers[i].name}
+										//- figure.sponsors--item
+											img.sponsors--item-image(src="dist/img/sponsors/#{organizers[i].slug}.jpg" alt="#{organizers[i].name}")
+											figcaption
+												h4.nested--content-title.typo-epsilon
+													a(href="#{organizers[i].url}" target="_blank" ) #{organizers[i].name}
+												//- p.nested--content-text موسسه طراحات و ایده‌پردازان آرتیمان صاحب امتیاز وب‌سایت مجیدآنلاین و مدرسه استانداردهای وب، در زمینه طراحی و توسعه نرم‌افزارهای وب و موبایل فعالیت دارد.
+
+
+
+							.wrap-row.between
+								section.column--xsmall-12.column--small-6
+									.organizers--info
+										h4.organizers--info-title.typo-zeta تماس با دبیرخانه:
+										p 
+											| تهران، میدان فاطمی، میدان گلها، خیابان کاج جنوبی، پلاک ۴۰
+											br
+											| تلفن دبیرخانه: ۸۸۹۸۵۰۳۰-۰۲۱
+											br
+											| نمابر دبیرخانه: ۸۸۹۸۰۸۹۵-۰۲۱
+
+										h4.organizers--info-title.typo-zeta ایمیل دبیرخانه:
+										p
+											a(href="mailto:contact@wsschool.org") contact@wsschool.org
+								
+								//- .column--xsmall-12.column--small-6
+									figure.nested
+										img.nested-image(src="dist/img/people/avatar-majidalavizadeh.jpg")
+										figcaption.nested--content
+											h4.nested--content-title.typo-zeta دبیر همایش: 
+											p مجید علوی زاده
+									
+									figure.nested
+										img.nested-image(src="dist/img/people/avatar-majidalavizadeh.jpg")
+										figcaption.nested--content
+											h4.nested--content-title.typo-zeta دبیر همایش: 
+											p مجید علوی زاده
+		<!-- -- /Organizers -- -->
+
+	<!-- -- /Main -- -->
+
+
+
+	include foundation/footer.jade
+
+
+	
+	<!-- -- Sticker -- -->
+	a.sticker.hide-on-small(href="#ticket")
+		i.fa.fa-ticket.fa-ml
+		| ثبت نام در همایش
+	<!-- -- /Sticker -- -->
+	
+
+
+	<!-- -- Navigation -- -->
+	nav.dot-navigation
+		.dot-list
+
+			a.dot-place.is-active(href="#introduction")
+				i.dot
+				span.dot-label معرفی رویداد
+			
+			a.dot-place(href="#speakers")
+				i.dot
+				span.dot-label سخنران‌ها
+
+			a.dot-place(href="#panels")
+				i.dot
+				span.dot-label پنل‌ها
+			
+			a.dot-place(href="#schedule")
+				i.dot
+				span.dot-label برنامه برگزاری
+				
+			a.dot-place(href="#ticket")
+				i.dot
+				span.dot-label ثبت‌نام
+
+			a.dot-place(href="#location")
+				i.dot
+				span.dot-label محل برگزاری
+
+			a.dot-place(href="#gallery")
+				i.dot
+				span.dot-label گالری
+
+			a.dot-place(href="#sponsors")
+				i.dot
+				span.dot-label حامیان
+
+			a.dot-place(href="#organizers")
+				i.dot
+				span.dot-label برگزارکنندگان
+				
+		span.dot-button.dot-open-menu
+			i.fa.fa-bars
+		a.dot-button.dot-button-light(href="#ticket")
+			i.fa.fa-ticket
+	<!-- -- /Navigation -- -->
+
