@@ -214,10 +214,7 @@ $(document).ready(function(){
 	*/
 	$.getJSON("http://conf.wsschool.org/fowd/register/instagram", function(result){
 		$.each(result, function(i, data){
-			if(i >= 18){
-				return false;
-			}
-			else{
+			if(i <= 18){
 				var el = document.createElement('div');
 				$(el).addClass('column--xsmall-6 column--small-4 column--medium-2')
 					.html('<figure class="gallery--photos-item" id='+i+'><img src='+ data.pic +'><figcaption class="gallery--photos-item_like"><div class="step"><b>'+ _englishNumber(data.like.toString()) +'</b><i class="fa fa-heart fa-mr"></i></div></figcaption><i class="ripple"></i></figure>')
